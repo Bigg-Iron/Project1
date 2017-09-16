@@ -1,16 +1,24 @@
-# Project1
-Our first project!
+# Project 1
+## Team Name: "   "
 
 
 
-## Brainstorming ideas: 
 
+
+# Brainstorming Ideas
+ 
 - Open data SD API
 - Google maps API
 - Ember.js Framework
 - Google Basecamp for Project Management
 - Google Material Design 
 - Materialize CSS Framework
+
+
+
+
+
+
 
 
 # Project Ideas
@@ -42,5 +50,22 @@ Our first project!
 
 
 
+
+
+# Project Tools 
+
+## Project management Tools:
+- Trello
+- Google Basecamp
+- Asana
+- FreedCamp
+
+
+
+
+## Frameworks
+-
+-
+-
 
 
