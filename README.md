@@ -23,6 +23,8 @@
 
 # Project Ideas
 
+<br>
+
 ## Fix it App
 - SD open data API
 
@@ -58,7 +60,7 @@
 
 
 # Project Tools 
-
+<br>
 ## Project management Tools:
 - Trello
 - Google Basecamp
