@@ -5,7 +5,7 @@
 <br><br>
 
 
-# Brainstorming Ideas
+# Brainstorming Ideas:
  
 - Open data SD API
 - Google maps API
@@ -21,7 +21,7 @@
 
 
 
-# Project Ideas
+# Project Ideas:
 
 <br> <br>
 
@@ -68,9 +68,9 @@
 
 
 
-# Project Tools 
+# Project Tools:
 
-<br>
+<br><br>
 
 ## Project management Tools:
 
