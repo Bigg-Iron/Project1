@@ -1,6 +1,6 @@
 # Project 1
 ## Team Name: Fantastic 4
-
+<a href="https://d3js.org"><img src="http://vignette4.wikia.nocookie.net/p__/images/e/e9/Fantastic_four_logo.jpg/revision/latest?cb=20130719192836&path-prefix=protagonist" align="left" hspace="10" vspace="6"></a>
 
 <br><br>
 
@@ -87,6 +87,6 @@
 * [Materialize CSS Framework](http://materializecss.com/)
 * [Bootstrap](http://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
-
+* [Postman](https://www.getpostman.com/)
 
 
