@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">      	
+	<title>San Diego's Furry Friends</title>
+</head>
+<body>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Find a Furry Friend!</h3>
+  </div>
+  <div class="panel-body">
+  		<div id="buttonDiv">
+   		 <p>pet category buttons go here</p>
+    	</div>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="row">
+			<div class="giphyResults">
+				<div id="giphyDiv">
+			  	</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-md-4">
+		<div class="userInput">
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">What other kind of pet are you looking for?</h3>
+			  </div>
+			  <div class="panel-body">
+			    
+			    <form>
+				  <div class="form-group">
+				    <label for="input">Pet Types</label>
+				    <input type="text" class="form-control" id="formInput">
+				    <small id="inputHelp" class="form-text text-muted">Enter the type of pet you'd like to search for.</small>
+				  </div>
+				  <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+				</form>
+
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript.js"></script>
+</body>
+</html>
