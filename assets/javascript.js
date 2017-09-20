@@ -31,7 +31,7 @@ $(document.body).on('click', '.petTypeButton', function() {
 	pets = $(this).attr("data-name");
 	$("#foundDiv").empty();
 	for (i=0; i<10; i++) {
-		// console.log(i);
+		console.log(i);
 		getPetFinder(i, pets);
 	};
 });
@@ -46,7 +46,6 @@ function getPetFinder(i, type) {
         data : {},
         url : queryURL + '&callback=?' ,
         dataType: 'json'}).done(function(response) {
-    		// var still = 
     		console.log(response);
     		var length = response.petfinder.pets.pet.length;
     		for(var i=0;i<length;i++) {
