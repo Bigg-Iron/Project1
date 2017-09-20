@@ -39,12 +39,13 @@ $(document.body).on('click', '.petTypeButton', function() {
 
 function getPetFinder(i, type) {
 
-	var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&animal=" + type + "&location=92129";
+	var queryURL = "http://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92129";
     $.ajax({
-      url: queryURL,
-      method: "GET"
-    	}).done(function(response) {
-    		console.log("pull request");
+        type : 'GET',
+        data : {},
+        url : queryURL + '&callback=?' ,
+        dataType: 'json'}).done(function(response) {
+    		console.log("pull request" ,response);
     		// var still = 
     		// var petDiv = $("<div class='gifs panel panel-info'>");
     		// var rating = response.data[i].rating;
@@ -61,6 +62,10 @@ function getPetFinder(i, type) {
     		// gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
     		// $("#giphyDiv").append(gifDiv);
 	});
+
+	function test() {
+		console.log("test ran")
+	}
 };
 
 
