@@ -31,7 +31,7 @@ $(document.body).on('click', '.petTypeButton', function() {
 	pets = $(this).attr("data-name");
 	$("#foundDiv").empty();
 	for (i=0; i<10; i++) {
-		// console.log(i);
+		console.log(i);
 		getPetFinder(i, pets);
 	};
 });
@@ -46,21 +46,29 @@ function getPetFinder(i, type) {
         url : queryURL + '&callback=?' ,
         dataType: 'json'}).done(function(response) {
     		console.log("pull request" ,response);
-    		// var still = 
-    		// var petDiv = $("<div class='gifs panel panel-info'>");
-    		// var rating = response.data[i].rating;
-    		// var display = $("<p>").text("Rating: " + rating);
-    		// var labelNum = i + 1;
-    		// var label = $("<h4>").text(title + " Gif #" + labelNum);
- 	    // 	var stillImage = $("<img>");
- 	    // 	stillImage.attr({"data-still":still, "data-animate":animate, "data-state":"still", "src":still, "id":title+"label"+i});
- 	    // 	stillImage.addClass("btn btn-default gifImage");
-    		// gifDiv.append(label); 	    	   		
-    		// gifDiv.append(display);
-    		// gifDiv.append(stillImage);
-    		// gifDiv.attr("id", "gif" + i);
-    		// gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
-    		// $("#giphyDiv").append(gifDiv);
+    		var breed = response.petfinder.pets.pet[i].breeds.breed.$t;
+    		var description = response.petfinder.pets.pet[i].description.$t;
+    		var age = response.petfinder.pets.pet[i].age.$t;
+    		var name = response.petfinder.pets.pet[i].name.$t;
+    		var sex = response.petfinder.pets.pet[i].sex.$t;
+    		// // var image = response.petfinder.pets.pet[i].media.photos.photo.x.$t;
+
+    		// var petDiv = $("<div class='pets panel panel-info'>");
+    		// var display1 = $("<p>").text("Name: " + name);
+    		// var display2 = $("<p>").text("Age: " + age);
+    		// var display3 = $("<p>").text("Sex: " + sex);
+    		// var display4 = $("<p>").text("Age: " + breed);
+
+ 	    // 	var petImage = $("<img>");
+ 	    // 	petImage.attr("src", image);
+ 	    // 	petImage.addClass("btn btn-default petDisplay");
+    		// petDiv.append(display1);
+    		// petDiv.append(display2); 	    	   		
+    		// petDiv.append(display3); 	    	   		
+    		// petDiv.append(display4); 	    	   		    	   		 	    	   		
+    		// petDiv.append(petImage);
+    		// petDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
+    		// $("#foundDiv").append(petDiv);
 	});
 
 	function test() {
