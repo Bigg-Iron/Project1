@@ -72,14 +72,21 @@
 
 <br><br>
 
-## Project management Tools:
+## Project Management Tools:
 
-- Trello
-- Google Basecamp
-- Asana
-- FreedCamp
+* [Trello](https://trello.com/)
+* [Google Basecamp](https://basecamp.com/)
+* [Asana](https://asana.com/)
+* [Trello](https://freedcamp.com/)
 
+<br><br>
 
+## Project Resources:
+
+* [Google Maps API](https://developers.google.com/maps/)
+* [Materialize CSS Framework](http://materializecss.com/)
+* [Bootstrap](http://getbootstrap.com/)
+* [jQuery](https://jquery.com/)
 
 
 
