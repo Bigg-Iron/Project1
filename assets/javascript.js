@@ -46,22 +46,28 @@ function getPetFinder(i, type) {
         data : {},
         url : queryURL + '&callback=?' ,
         dataType: 'json'}).done(function(response) {
-    		console.log("pull request" ,response);
     		// var still = 
-    		// var petDiv = $("<div class='gifs panel panel-info'>");
-    		// var rating = response.data[i].rating;
-    		// var display = $("<p>").text("Rating: " + rating);
-    		// var labelNum = i + 1;
-    		// var label = $("<h4>").text(title + " Gif #" + labelNum);
- 	    // 	var stillImage = $("<img>");
- 	    // 	stillImage.attr({"data-still":still, "data-animate":animate, "data-state":"still", "src":still, "id":title+"label"+i});
- 	    // 	stillImage.addClass("btn btn-default gifImage");
-    		// gifDiv.append(label); 	    	   		
-    		// gifDiv.append(display);
-    		// gifDiv.append(stillImage);
-    		// gifDiv.attr("id", "gif" + i);
-    		// gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
-    		// $("#giphyDiv").append(gifDiv);
+    		console.log(response);
+    		var length = response.petfinder.pets.pet.length;
+    		for(var i=0;i<length;i++) {
+    		var petDiv = $("<div class='gifs panel panel-info'>");
+    		var breed = response.petfinder.pets.pet[i].breeds.breed.$t;
+    		var display = $("<p>").text("Breed: " + breed);
+    		var labelNum = i + 1;
+    		var label = $("<h4>").text(" Gif #" + labelNum);
+    		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
+    		console.log(imgSrc);
+ 	    	var stillImage = $("<img>");
+ 	     	stillImage.attr("src", imgSrc);
+ 	     	stillImage.addClass("btn btn-default gifImage");
+    		 var gifDiv = $("<div>");
+    		 gifDiv.append(label); 	    	   		
+    		 gifDiv.append(display);
+    		 gifDiv.append(stillImage);
+    		 gifDiv.attr("id", "gif" + i);
+    		 gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
+    		 $("#giphyDiv").append(gifDiv);
+    		}
 	});
 
 	function test() {
