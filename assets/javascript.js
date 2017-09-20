@@ -46,30 +46,27 @@ function getPetFinder(i, type) {
         data : {},
         url : queryURL + '&callback=?' ,
         dataType: 'json'}).done(function(response) {
-    		console.log("pull request" ,response);
+    		console.log(response);
+    		var length = response.petfinder.pets.pet.length;
+    		for(var i=0;i<length;i++) {
+    		var petDiv = $("<div class='gifs panel panel-info'>");
     		var breed = response.petfinder.pets.pet[i].breeds.breed.$t;
-    		var description = response.petfinder.pets.pet[i].description.$t;
-    		var age = response.petfinder.pets.pet[i].age.$t;
-    		var name = response.petfinder.pets.pet[i].name.$t;
-    		var sex = response.petfinder.pets.pet[i].sex.$t;
-    		// // var image = response.petfinder.pets.pet[i].media.photos.photo.x.$t;
-
-    		// var petDiv = $("<div class='pets panel panel-info'>");
-    		// var display1 = $("<p>").text("Name: " + name);
-    		// var display2 = $("<p>").text("Age: " + age);
-    		// var display3 = $("<p>").text("Sex: " + sex);
-    		// var display4 = $("<p>").text("Age: " + breed);
-
- 	    // 	var petImage = $("<img>");
- 	    // 	petImage.attr("src", image);
- 	    // 	petImage.addClass("btn btn-default petDisplay");
-    		// petDiv.append(display1);
-    		// petDiv.append(display2); 	    	   		
-    		// petDiv.append(display3); 	    	   		
-    		// petDiv.append(display4); 	    	   		    	   		 	    	   		
-    		// petDiv.append(petImage);
-    		// petDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
-    		// $("#foundDiv").append(petDiv);
+    		var display = $("<p>").text("Breed: " + breed);
+    		var labelNum = i + 1;
+    		var label = $("<h4>").text(" Gif #" + labelNum);
+    		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
+    		console.log(imgSrc);
+ 	    	var stillImage = $("<img>");
+ 	     	stillImage.attr("src", imgSrc);
+ 	     	stillImage.addClass("btn btn-default gifImage");
+    		 var gifDiv = $("<div>");
+    		 gifDiv.append(label); 	    	   		
+    		 gifDiv.append(display);
+    		 gifDiv.append(stillImage);
+    		 gifDiv.attr("id", "gif" + i);
+    		 gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
+    		 $("#giphyDiv").append(gifDiv);
+    		}
 	});
 
 	function test() {
