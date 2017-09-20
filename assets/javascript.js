@@ -39,7 +39,7 @@ $(document.body).on('click', '.petTypeButton', function() {
 
 function getPetFinder(i, type) {
 
-	var queryURL = "http://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&animal=" + type + "&location=92129";
+	var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&animal=" + type + "&location=92129";
     $.ajax({
       url: queryURL,
       method: "GET"
