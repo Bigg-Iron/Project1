@@ -50,7 +50,6 @@
 
 
 
-
 # Project Tools:
 
 <br><br>
@@ -75,7 +74,8 @@
   * Marvel API
   * OMDB
   * Zillow
-                        
+
+<br>
 
 ## Project Management Tools:
 
