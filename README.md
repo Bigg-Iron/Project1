@@ -1,11 +1,13 @@
 # Project 1
 ## Team Name: Fantastic 4
-<img src="assets/images/pawsAndClaws.png" align="left" hspace="10" vspace="6"></a>
+
+![alt text](assets/images/pawsAndClaws.png "Paws and Claws")
+
 
 <br><br>
 
 
-# Brainstorming Ideas:
+# Brainstorming:
  
 - Open data SD API
 - Google maps API
@@ -18,6 +20,32 @@
 
 
 <br><br>
+
+# Project Requirements
+1. Must use at least two APIs
+   * Google Maps API 
+   * Google Firebase API
+   * ?
+
+2. Must utilize at least one new library or technology that we haven't discussed
+   * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
+
+3. Must meet good quality coding standards (indentation, scoping, naming)
+
+4. Must NOT use alerts, confirms, or prompts (look into modals!)
+
+5. Must have some sort of repeating element (table, columns, etc)
+
+6. Must use Bootstrap or Alternative CSS Framework
+
+7. Must be Deployed (Github Pages...etc)
+
+8. Must have User Input Validation
+
+
+
+<br><br>
+
 
 
 
