@@ -50,21 +50,42 @@ function getPetFinder(i, type) {
     		var length = response.petfinder.pets.pet.length;
     		for(var i=0;i<length;i++) {
     		var petDiv = $("<div class='gifs panel panel-info'>");
-    		var breed = response.petfinder.pets.pet[i].breeds.breed.$t;
-    		var display = $("<p>").text("Breed: " + breed);
+    		var breed = response.petfinder.pets.pet[i].breeds.breed;
+			var display = $("<p>");
+			 if(Array.isArray(breed)) {
+				console.log("breed" + breed[0].$t);
+				display.text("Breed: " + breed[0].$t);
+			} else if(typeof breed == 'object') {
+				console.log("breed" + breed.$t);
+				display.text("Breed: " + breed.$t);
+			}
     		var labelNum = i + 1;
     		var label = $("<h4>").text(" Gif #" + labelNum);
-    		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
+
+    		console.log(response.petfinder.pets.pet[i].media.photos.photo.length);
+    		// console.log(response.petfinder.pets.pet[i].media.photos.photo[0].$id);
+    		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[0].$t;
+
+    		// for(var j=0;i<response.petfinder.pets.pet[i].media.photos.photo.length;j++) {
+    		// 	console.log(response.petfinder.pets.pet[i].media.photos.photo[j]);
+    		// 	if(response.petfinder.pets.pet[i].media.photos.photo[j].size == 'x') {
+    		// 		imgSrc = response.petfinder.pets.pet[i].media.photos.photo[j].$t;
+    		// 		break;
+    		// 	}
+    		// }
+
     		console.log(imgSrc);
  	    	var stillImage = $("<img>");
  	     	stillImage.attr("src", imgSrc);
+ 	     	stillImage.attr("style", "width:300px;height:300px");
  	     	stillImage.addClass("btn btn-default gifImage");
     		 var gifDiv = $("<div>");
     		 gifDiv.append(label); 	    	   		
     		 gifDiv.append(display);
     		 gifDiv.append(stillImage);
     		 gifDiv.attr("id", "gif" + i);
-    		 gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"10px", "text-align":"center"})
+    		 gifDiv.addClass("container");
+    		 gifDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"30px", "text-align":"center"})
     		 $("#giphyDiv").append(gifDiv);
     		}
 	});
