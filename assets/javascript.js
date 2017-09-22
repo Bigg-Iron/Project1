@@ -53,7 +53,7 @@ function getPetFinder(i, type) {
     		var breed = response.petfinder.pets.pet[i].breeds.breed.$t;
     		var display = $("<p>").text("Breed: " + breed);
     		var labelNum = i + 1;
-    		var label = $("<h4>").text(" Gif #" + labelNum);
+    		var label = $("<h4>").text("Result #" + labelNum);
     		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
     		console.log(imgSrc);
  	    	var stillImage = $("<img>");
