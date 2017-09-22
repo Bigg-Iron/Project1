@@ -39,7 +39,7 @@ $(document.body).on('click', '.petTypeButton', function() {
 
 function getPetFinder(i, type) {
 
-  var queryURL = "http://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92129";
+  var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92129";
 
     $.ajax({
         type : 'GET',
@@ -73,7 +73,8 @@ function getPetFinder(i, type) {
     		// 		break;
     		// 	}
     		// }
-
+    		var label = $("<h4>").text("Result #" + labelNum);
+    		var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
     		console.log(imgSrc);
  	    	var stillImage = $("<img>");
  	     	stillImage.attr("src", imgSrc);

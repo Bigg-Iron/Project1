@@ -1,11 +1,13 @@
 # Project 1
 ## Team Name: Fantastic 4
-<a href="https://d3js.org"><img src="http://vignette4.wikia.nocookie.net/p__/images/e/e9/Fantastic_four_logo.jpg/revision/latest?cb=20130719192836&path-prefix=protagonist" align="left" hspace="10" vspace="6"></a>
+
+![alt text](assets/images/pawsAndClaws.png "Paws and Claws")
+
 
 <br><br>
 
 
-# Brainstorming Ideas:
+# Brainstorming:
  
 - Open data SD API
 - Google maps API
@@ -19,46 +21,28 @@
 
 <br><br>
 
+# Project Requirements
+1. Must use at least two APIs
+   * Google Maps API 
+   * Google Firebase API
+   * ?
 
+2. Must utilize at least one new library or technology that we haven't discussed
+   * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
 
-# Project Ideas:
+3. Must use AJAX to pull data
 
-<br> <br>
+4. Must meet good quality coding standards (indentation, scoping, naming)
 
-## Fix it App
-- SD open data API
+5. Must NOT use alerts, confirms, or prompts (look into modals!)
 
-<br>
+6. Must have some sort of repeating element (table, columns, etc)
 
-## Music Based on Emotion App
-- Spotify API
-- Uses facial recognition to suggest songs or playlists based on mood
+7. Must use Bootstrap or Alternative CSS Framework
 
-<br>
+8. Must be Deployed (Github Pages...etc)
 
-## Movie Based Emotion App
-- IMDB API
-- Facial recognition API
-
-<br>
-
-## Pick me up app that shares your location to someone
-- Google maps API
-
-<br>
-
-## Jeopardy Game
-- Plus added features
-
-<br>
-
-## Digital Missing Pet Bulletin Board
-- Google maps API
-
-<br>
-
-## Add Your Idea Here
-- Add it's features and attributes here 
+9. Must have User Input Validation
 
 
 
@@ -71,6 +55,29 @@
 # Project Tools:
 
 <br><br>
+
+## API 'Suggestions'
+* Allow CORS
+* Simple or no authentication
+* JSON response returned
+* Well documented
+
+  * Spotify Web API
+  * Reddit API
+  * YouTube API
+  * LinkedIn
+  * SoundCloud
+  * Wikipedia
+  * Rotten Tomatoes
+  * Flickr
+  * Pinterest API
+  * Google Custom Search API
+  * Tumblr API
+  * Marvel API
+  * OMDB
+  * Zillow
+
+<br>
 
 ## Project Management Tools:
 

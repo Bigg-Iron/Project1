@@ -6,7 +6,13 @@
   	<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">      	
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<style>
+			#map {
+			 height: 400px;
+			 width: 100%;
+			}
+	 </style>
 	<title>San Diego's Furry Friends</title>
 </head>
 <body>
@@ -32,7 +38,7 @@
 		</div>
 
 	</div>
-	<div class="col-md-4">
+<!-- 	<div class="col-md-4">
 		<div class="userInput">
 			<div class="panel panel-primary">
 			  <div class="panel-heading">
@@ -52,8 +58,28 @@
 			  </div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
+
+<h3>Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+	function initMap() {
+		var uluru = {lat: -25.363, lng: 131.044};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+		});
+	}
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJdQfFF4yK-0ZDiA-0CrYhWX81ARnrUCU&callback=initMap"">
+</script>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
