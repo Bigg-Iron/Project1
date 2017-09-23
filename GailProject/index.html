@@ -573,7 +573,7 @@
     <scritp scr="assets/popper.js"></scritp>
 
 
-
+  <!-- ↓ Google Firebase ↓ -->
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
   // Initialize Firebase
@@ -591,9 +591,12 @@
   
 $("#sendMessageButton").on('click', function() {
 
+  var name = $("#name").val().trim();
+  var comment = $("#message").val().trim();
+
   database.ref('/siteComments/newUser').push({
-    username: 'userName',
-    comment: 'userComment'
+    username: name,
+    comment: comment
   });
     
 });
