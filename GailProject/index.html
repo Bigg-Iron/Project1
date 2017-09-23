@@ -22,8 +22,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/style.css" rel="stylesheet">
     <link href="assets/freelancer.js">
-    <link
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body id="page-top">
@@ -562,13 +561,13 @@
 
     <!-- Contact Form JavaScript -->
     <!--<script src="js/jqBootstrapValidation.js"></script>-->
-    <script src="assets/contact_me.js"></script>
+    <!-- <script src="assets/contact_me.js"></script> -->
 
 
     <!-- Custom scripts for this template -->
-    <script src="assets/main.js"></script>
+    <!-- <script src="assets/main.js"></script>
     <script src="assets/freelancer.js"></script>
-    <scritp scr="assets/popper.js"></scritp>
+    <scritp scr="assets/popper.js"></scritp> -->
 
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
@@ -584,15 +583,17 @@
   firebase.initializeApp(config);
 
   var database = firebase.database();
-  // write
-  database.ref('users/' + userId).set(user);
   
+  database.ref('/siteComments').push({
+    username: 'test',
+    comment: 'test'
+  })
   // read / listen
-  database.child("users").on('value', function(snapshot) {
-    // ...
+  // database.child("users").on('value', function(snapshot) {
+  //   // ...
 
-    
-  });
+
+  // });
 
 
 
