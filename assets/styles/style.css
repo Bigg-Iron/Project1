@@ -3,6 +3,9 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
+
+
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden; }
@@ -205,7 +208,6 @@ header.masthead {
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
-
 #results .results-item {
   right: 0;
   margin: 0 0 15px; }
@@ -213,12 +215,15 @@ header.masthead {
     position: relative;
     display: block;
     max-width: 400px;
+    max-height: 400px;
     margin: 0 auto;
-    cursor: pointer; }
+    cursor: pointer; 
+  }
     #results .results-item .results-link .caption {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      object-fit: cover;
+/*      width: 100%;
+      height: 100%;*/
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
