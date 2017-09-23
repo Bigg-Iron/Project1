@@ -11,15 +11,15 @@ $(document.body).on('click', '.petTypeButton', function() {
 
 
 function getPetFinder(type) {
-    var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92129";
+    var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92122";
     $.ajax({
         type : 'GET',
         data : {},
         url : queryURL + '&callback=?' ,
         dataType: 'json'}).done(function(response) {
             console.log(response);
-            // var length = response.petfinder.pets.pet.length;
-            for(var i=0;i<6;i++) {
+            var length = response.petfinder.pets.pet.length;
+            for(var i=0;i<length;i++) {
                 var petDiv = $("<div class='gifs panel panel-info'>");
                 var petBreed = response.petfinder.pets.pet[i].breeds.breed;
                 var petName = response.petfinder.pets.pet[i].name.$t;
@@ -39,33 +39,30 @@ function getPetFinder(type) {
                         } else if(typeof petBreed == 'object') {
                     // console.log("Breed" + petBreed.$t);
                         breedLabel.text("Breed: " + petBreed.$t + " (" + petAge + ")");
-                    }          
-
-                // console.log(response.petfinder.pets.pet[i].media.photos.photo.length);
-                // var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[0].$t;
+                    }
 
                 var nameLabel = $("<h3>").text("Meet "+ petName + "!");
                 // var ageLabel = $("<h5>").text("Age: "+ petAge);
                 // var sizeLabel = $("<h5>").text("Size: "+ petSize);
                 // var sexLabel = $("<h5>").text("Sex: "+ petSex);
-                var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
-                // console.log(imgSrc);
+                var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[7].$t;
+                console.log("result "+ i + " = " + imgSrc);
 
                 var petPic = $("<img>");
                     petPic.attr("src", imgSrc);
-                    petPic.attr("style", "width:300px;height:300px");
+                    // petPic.attr("style", "width:300px;height:300px");
                     petPic.addClass("btn btn-default petImage");
 
                  var petDiv = $("<div>");
-                    petDiv.append(nameLabel);                   
-                    petDiv.append(breedLabel);
+                    // petDiv.append(nameLabel);                   
+                    // petDiv.append(breedLabel);
                     // petDiv.append(ageLabel);
                     // petDiv.append(sizeLabel);
                     // petDiv.append(sexLabel);
                     petDiv.append(petPic);
                     petDiv.attr("id", "pet" + i);
                     petDiv.addClass("container");
-                    // petDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"30px", "text-align":"center"})
+                    petDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"30px", "text-align":"center"})
                 $("#resultsDiv").append(petDiv);
             }
     });
