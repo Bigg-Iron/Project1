@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>gailproject1</title>
+    <title>Paws and Claws</title>
 
     <!-- Bootstrap core CSS -->
     <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
@@ -140,8 +140,15 @@
       </div>
     </section>
 
-    <!--Add map results here?-->
+    <!-- ↓ Google Maps ↓ -->
+  <section>
+    <div class="container">
 
+      <h2 class="text-center"> ↓ GOOGLE MAPS SHOULD SHOW HERE ↓ </h2>
+      <div id="map"></div>
+
+    </div>
+  </section>
 
 
 
@@ -569,6 +576,8 @@
     <script src="assets/freelancer.js"></script>
     <scritp scr="assets/popper.js"></scritp> -->
 
+
+
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
   // Initialize Firebase
@@ -584,17 +593,16 @@
 
   var database = firebase.database();
   
-  database.ref('/siteComments').push({
-    username: 'test',
-    comment: 'test'
-  })
-  // read / listen
-  // database.child("users").on('value', function(snapshot) {
-  //   // ...
+$("#sendMessageButton").on('click', function() {
 
-
-  // });
-
+  database.ref('/siteComments/newUser').push({
+    username: 'userName',
+    comment: 'userComment'
+  });
+    
+});
+  
+  
 
 
 
