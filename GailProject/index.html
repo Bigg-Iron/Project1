@@ -203,12 +203,12 @@
             <form name="sentMessage" id="contactForm" novalidate>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <!--<label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required data-validation-required-message="Please enter your name.">
+                  <label>Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="Enter Your Name Here. . ." required data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="control-group">
+              <!--<div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <label>Email Address</label>
                   <input class="form-control" id="email" type="email" placeholder="Email Address" required data-validation-required-message="Please enter your email address.">
@@ -225,7 +225,7 @@
               <div class="control-group">-->
                 <div class="form-group floating-label-form-group controls">
                   <label>Comments</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="We welcome your comments . . ." required data-validation-required-message="We welcome your comments..."></textarea>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Leave your comments here . . ." required data-validation-required-message="We welcome your comments..."></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -569,6 +569,21 @@
     <script src="assets/main.js"></script>
     <script src="assets/freelancer.js"></script>
     <scritp scr="assets/popper.js"></scritp>
+
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
+    authDomain: "project1-c6321.firebaseapp.com",
+    databaseURL: "https://project1-c6321.firebaseio.com",
+    projectId: "project1-c6321",
+    storageBucket: "project1-c6321.appspot.com",
+    messagingSenderId: "1039060630480"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.ref()
+</script>
 
   </body>
 
