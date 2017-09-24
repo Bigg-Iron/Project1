@@ -1,12 +1,16 @@
 console.log("JavaScript is loaded")
 $(document).ready(function(){
 
+$("#results").hide();
+
 var petType = "";
 
 $(document.body).on('click', '.petTypeButton', function() {
     petType = $(this).attr("data-name");
     console.log("the " + petType + " button was clicked");
     getPetFinder(petType);
+    $("#results").show();
+    $("#mapSection").show();
 });
 
 
@@ -19,7 +23,7 @@ function getPetFinder(type) {
         dataType: 'json'}).done(function(response) {
             console.log(response);
             // var length = response.petfinder.pets.pet.length;
-            for(var i=0;i<6;i++) {
+            for(var i=0;i<12;i++) {
                 // get object data
                 var petDiv = $("<div class='gifs panel panel-info'>");
                 var petBreed = response.petfinder.pets.pet[i].breeds.breed;
@@ -54,7 +58,7 @@ function getPetFinder(type) {
                 var id = "#results" + (i+1);
                 console.log(id);
                 $(id).attr("src", imgSrc);
-                $(id).css({"object-fit":"cover", "border":"2px solid black", "border-radius":"8px"});
+                // $(id).css({"object-fit":"cover", "border":"1px solid #555", "border-radius":"8px"});
 
                 // var labelID = "#label" + (i+1);
                 // $(labelID).h4.text(nameLabel);

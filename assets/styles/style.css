@@ -4,6 +4,25 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
+#results {
+  display: none;
+}
+
+#mapSection {
+  display: none;
+}
+
+.resultsImage .results-item {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  border: 2px solid #555;
+  border-radius: 10px;
+  margin: 40px;
+
+}
+
 
 
 body {
@@ -36,8 +55,8 @@ h2 {
 
 
 
-/*h1,
-h2,*/
+h1,
+h2,
 h3,
 h4,
 h5,
@@ -208,43 +227,44 @@ header.masthead {
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
-#results .results-item {
+/*#results .results-item {
   right: 0;
-  margin: 0 0 15px; }
+  margin: 15px; }*/
+
   #results .results-item .results-link {
     position: relative;
     display: block;
     max-width: 400px;
     max-height: 400px;
-    margin: 0 auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 10px auto;
     cursor: pointer; 
   }
     #results .results-item .results-link .caption {
       position: absolute;
-      object-fit: cover;
-/*      width: 100%;
-      height: 100%;*/
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
       opacity: 0;
-      background: rgba(24, 188, 156, 0.9); }
+ }
       #results .results-item .results-link .caption:hover {
         opacity: 1; }
-      #results .results-item .results-link .caption .caption-content {
+     .caption .caption-content {
         font-size: 20px;
         position: absolute;
+        z-index: 10;
         top: 50%;
         width: 100%;
         height: 20px;
         margin-top: -12px;
         text-align: center;
         color: white; }
-        #results .results-item .results-link .caption .caption-content i {
+/*        #results .results-item .results-link .caption .caption-content i {
           margin-top: -12px; }
         #results .results-item .results-link .caption .caption-content h3,
         #results .results-item .results-link .caption .caption-content h4 {
-          margin: 0; }
+          margin: 0; }*/
 
 #results * {
   z-index: 2; }
