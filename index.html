@@ -317,8 +317,8 @@
 
               <!-- User Submitted Comments-->
               <div class="panel panel-default">
-                  <div class="panel-heading">User</div>
-                  <div class="panel-body">
+                  <div class="panel-heading" id="userName">User</div>
+                  <div class="panel-body" id="userComment">
                     User comment.
                   </div>
                 </div>
@@ -676,13 +676,20 @@
   
 $("#sendMessageButton").on('click', function() {
 
+  // Grabs user input
   var name = $("#name").val().trim();
   var comment = $("#message").val().trim();
 
-  database.ref('/siteComments/newUser').push({
-    username: name,
+  // Creates local temporary object for holding user name and comments
+  var newUser = {
+    name: name,
     comment: comment
-  });
+  };
+
+  // Uploads user data to the database
+  database.ref('/siteComments/newUser').push(newUser);
+
+
     
 });
   
