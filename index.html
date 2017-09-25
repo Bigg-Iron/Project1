@@ -316,12 +316,12 @@
               </div>
 
               <!-- User Submitted Comments-->
-              <div class="panel panel-default">
-                  <div class="panel-heading" id="userName">User</div>
-                  <div class="panel-body" id="userComment">
-                    User comment.
-                  </div>
+              <section>
+                <div class="container-fluid">
+                  <div id="userName"> </div>
+                  <div id="userComment"> </div>
                 </div>
+              </section>
 
 
 
@@ -658,6 +658,8 @@
     <scritp scr="assets/scripts/popper.js"></scritp>
 
 
+    
+
   <!-- ↓ Google Firebase ↓ -->
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
@@ -674,28 +676,54 @@
 
   var database = firebase.database();
   
-$("#sendMessageButton").on('click', function() {
+  $("#sendMessageButton").on('click', function () {
 
-  // Grabs user input
-  var name = $("#name").val().trim();
-  var comment = $("#message").val().trim();
+    // Grabs user input
+    var name = $("#name").val().trim();
+    var comment = $("#message").val().trim();
 
-  // Creates local temporary object for holding user name and comments
-  var newUser = {
-    name: name,
-    comment: comment
-  };
+    // Creates local temporary object for holding user name and comments
+    var newUsers = {
+      name: name,
+      comment: comment
+    };
 
-  // Uploads user data to the database
-  database.ref('/siteComments/newUser').push(newUser);
+    // Uploads user data to the database
+    database.ref('/siteComments/newUsers').push(newUsers);
+
+    // Console logging for tests
+    console.log(newUsers.name);
+    console.log(newUsers.comment);
+
+    // Clears all of the text-boxes
+    $("#name").val("");
+    $("#message").val("");
+
+   
+  });
+  
+
+// Create Firebase event for adding user comments to the database and a row in the html when a user adds one.
+database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+  // Console logging child snapshot
+  console.log(childSnapshot.val());
+
+  // Store everything into a variable.
+  var aUser = childSnapshot.val().name;
+  var aUserComment = childSnapshot.val().comment;
+
+  // Console logging name and comment
+  console.log(aUser);
+  console.log(aUserComment);
+
+  // Populate html with user comments
+  $('#userName').append('<p> Name:  </p>' + newUsers.name);
+  $('#userComment').append('<p> Comment: </p>' + newUsers.comment);
 
 
-    
+
 });
-  
-  
-
-
 
 
 
