@@ -1,7 +1,7 @@
 # Project 1
 ## Team Name: Fantastic 4
 
-![alt text](assets/images/pawsAndClaws.png "Paws and Claws")
+![alt text](assets/images/new-logo.png "Paws and Claws")
 
 
 <br><br>
@@ -25,7 +25,7 @@
 1. Must use at least two APIs
    * Google Maps API 
    * Google Firebase API
-   * ?
+   * Popper.js
 
 2. Must utilize at least one new library or technology that we haven't discussed
    * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
