@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--gailbranch-->
   <head>
 
     <meta charset="utf-8">
@@ -13,12 +13,13 @@
     <!-- Style Sheets -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="assets/styles/style.css" rel="stylesheet">    
+    <link href="assets/styles/style.css" rel="stylesheet">   
+
  </head>
 
   <body id="page-top">
@@ -27,7 +28,9 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-        <img src="assets/images/logo.png" alt="logo" style="width:100px;height:100px;">
+
+        <a href="#">
+        <img class="img-fluid logo1" src="assets/images/new-logo.png" alt="logo" data-name="logo" style="width:120px;height:110px;"></a>
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -38,9 +41,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mapResults">Map</a>
-            </li>
+            </li>-->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#comments">Comments</a>
             </li>
@@ -53,15 +56,15 @@
     <header class="masthead">
       <div class="container">
         <a href="#">
-        <img class="img-fluid petTypeButton" src="assets/images/cat.png" alt="cat" data-name="cat" style="width:250px;height:250px;"></a>
+        <img class="img-fluid petTypeButton" src="assets/images/new-cat.png" alt="cat" data-name="cat" style="width:150px;height:150px;"></a>
 
         <a href="#">
-        <img class="img-fluid petTypeButton" src="assets/images/dog.png" alt="dog" data-name="dog" style="width:250px;height:250px;"></a>
+        <img class="img-fluid petTypeButton" src="assets/images/new-dog.png" alt="dog" data-name="dog" style="width:150px;height:150px;"></a>
 
         <div class="intro-text">
           <span class="name">Find The Perfect Furry Friend</span>
           <hr class="star-light">
-          <span class="skills">Click on the Cat or Dog</span>
+          <span class="skills">Click on the Dog or Cat</span>
         </div>
       </div>
     </header>
@@ -141,10 +144,10 @@
           <a href="#" id="showMoreButton" class="btn btn-info">Show More Pets!</a>       
         </div>
       </div>
-    </section>
+  </section>
 
     <section id="showMore">
-      <div class="container">
+      <div class="container" id="showMore">
         <div class="row">
 
           <div class="col-sm-4 results-item">
@@ -214,15 +217,19 @@
           </div>          
         </div>
       </div>
-    </section>
-
-    <!-- Google Maps -->
-  <section id="mapSection">
-    <div class="container">
-      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
-      <div id="map"></div>
-    </div>
   </section>
+
+   <!--  Google Maps
+    <section id="mapSection">
+       <div class="container">
+     <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        </div>
+  </section> -->
 
 
 
@@ -240,6 +247,10 @@
             <h1>San Deigo Animal Services,
             <a href="http://www.sddac.com/" target="_blank">visit</a></h1>
             <p>858-694-3900</p>
+
+            <h1>Second Chance Dog Rescue,
+            <a href="http://secondchancedogrescue.org/" target="_blank">visit</a></h1> 
+            <p>619-345-8976</p>
           </div>
 
           <div class="col-lg-4 mr-auto">
@@ -248,10 +259,30 @@
             <a href="https://animalcenter.org/" target="_blank">visit</a></h1>
             <p>858-756-4117</p>
 
-            <h1>Rancho Costal Humane Society,
+            <h1>RC Humane Society,
             <a href="https://www.rchumanesociety.org" target="_blank">visit</a></h1>
             <p>760-753-6413</p>
+            
+            <h1>K9 Pet Adoption,
+            <a href="http://www.k9connectionpetadoption.org/" target="_blank">visit</a></h1>  
+            <p>858-909-9876</p>
           </div>
+
+          <div class="col-lg-4 mr-auto">
+            
+            <h1>Oceanside Dog Campus,
+            <a href="https://sdhumane.org/" target="_blank">visit</a></h1>
+            <p>858-756-4117</p>
+
+            <h1>Animal Rescue Thrift Store,
+            <a href="https://lastchanceatlife.org/" target="_blank">visit</a></h1>
+            <p>760-658-2134</p>
+            
+            <h1>All Pets Animal Hospital,
+            <a href="http://www.allpetsanimal.com/" target="_blank">visit</a></h1>
+            <p>760-634-2022</p>
+          </div>
+
           <!--<div class="col-lg-8 mx-auto text-center">
             <a href="#" class="btn btn-lg btn-outline">
               <i class="fa fa-download"></i>
@@ -260,7 +291,26 @@
           </div>
         </div>
       </div>
+      <!--  <div class="container"> -->
+    <!--   <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        <!-- </div> -->
     </section>
+
+     <!-- <!-- <section id="mapSection">
+         <div class="container" id="mapsSection">
+      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        </div>
+  </section> -->
 
     <!-- Comments Section -->
     <section id="comments">
@@ -319,7 +369,7 @@
         </div>
       </div>
     </section>
-
+    <hr>
     <!-- Footer -->
     <footer class="text-center">
       <div class="footer-above">
@@ -334,13 +384,13 @@
               <h3>Follow Us</h3>
               <ul class="list-inline">
                 <li class="list-inline-item">
-                  <img src="assets/images/facebook.png" alt="FaceBook" style="width:75px; height:75px">
-                 <img src="assets/images/Twitter.png" alt="Twiter" style="width:75px; height:75px">
-                 <img src="assets/images/instagram.png" alt="Instagram" style="width:75px; height:75px">
+                  <img src="assets/images/facebook.png" alt="FaceBook" style="width:50px; height:50px">
+                 <img src="assets/images/Twitter.png" alt="Twiter" style="width:50px; height:50px">
+                 <img src="assets/images/instagram.png" alt="Instagram" style="width:50px; height:50px">
             </div>
             <div class="footer-col col-md-4">
               <h3>Donate Now</h3>
-              <p>Consider donating to the Helen Woodward Center
+              <p>Please donate to the Helen Woodward Center
                 <a href="https://my.animalcenter.org/checkout/donation?eid=49430&_ga=2.262435342.367766411.1506111173-178301709.1505932594&_gac=1.216680292.1506130284.CjwKEAjw6ZLOBRCLyNXAwfCPmlQSJADHPIJbAW89p3IlhspG25BLIN7XLK1p_-S9nXksZ7g9DkjAuxoC9yvw_wcB" target="_blank">TODAY.</a></p>
 
             </div>
@@ -812,7 +862,6 @@
 
 
     <!-- Custom scripts for this template -->
-    <script src="assets/scripts/javascript.js"></script>;
     <!-- <script src="assets/scripts/javascript-map.js"></script>; -->
     <script src="assets/scripts/freelancer.js"></script>
     <script src="assets/scripts/main.js"></script> 
