@@ -3,14 +3,40 @@ $(document).ready(function(){
 
 $("#results").hide();
 
+// declare and initialize global variables
 var petType = "";
+var petBreed = "";
+var petName = "";
+var petSex = "";
+var petSize = "";
+var petAge = "";
+var petStreet = "";
+var petCity = "";
+var petState = "";
+var petZip = "";
+var petID = "";
+var imgSrc = "";
+var breedLabel = "";
+var nameLabel = "";
+var ageLabel = "";
+var sizeLabel = "";
+var sexLabel = "";
+var id = "";
 
 $(document.body).on('click', '.petTypeButton', function() {
+    event.preventDefault();
     petType = $(this).attr("data-name");
     console.log("the " + petType + " button was clicked");
     getPetFinder(petType);
     $("#results").show();
-    $("#mapSection").show();
+    // $("#mapSection").show();
+});
+
+$(document.body).on('click', '#showMoreButton', function () {
+    event.preventDefault();
+    console.log("The 'showMoreButton' was clicked");
+    $('#showMoreButton').hide();
+    $('#showMore').slideDown(1500);
 });
 
 
@@ -25,60 +51,39 @@ function getPetFinder(type) {
             // var length = response.petfinder.pets.pet.length;
             for(var i=0;i<12;i++) {
                 // get object data
-                var petDiv = $("<div class='gifs panel panel-info'>");
-                var petBreed = response.petfinder.pets.pet[i].breeds.breed;
-                var petName = response.petfinder.pets.pet[i].name.$t;
-                var petSex = response.petfinder.pets.pet[i].sex.$t;
-                var petSize = response.petfinder.pets.pet[i].size.$t;
-                var petAge = response.petfinder.pets.pet[i].age.$t;
-                // var petStreet = response.petfinder.pets.pet[i].contact.address1
-                var petCity = response.petfinder.pets.pet[i].contact.city.$t;
-                var petState = response.petfinder.pets.pet[i].contact.state.$t;
-                var petZip = response.petfinder.pets.pet[i].contact.zip.$t;
-                var petID = response.petfinder.pets.pet[i].id.$t;
-                // var shelterId = response.petfinder.pets.pet[i].shelterID.$t;
-                var imgSrc = response.petfinder.pets.pet[i].media.photos.photo[7].$t;
+                petBreed = response.petfinder.pets.pet[i].breeds.breed;
+                petName = response.petfinder.pets.pet[i].name.$t;
+                petSex = response.petfinder.pets.pet[i].sex.$t;
+                petSize = response.petfinder.pets.pet[i].size.$t;
+                petAge = response.petfinder.pets.pet[i].age.$t;
+                petStreet = response.petfinder.pets.pet[i].contact.address1
+                petCity = response.petfinder.pets.pet[i].contact.city.$t;
+                petState = response.petfinder.pets.pet[i].contact.state.$t;
+                petZip = response.petfinder.pets.pet[i].contact.zip.$t;
+                petID = response.petfinder.pets.pet[i].id.$t;
+                imgSrc = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
                 console.log("result "+ i + " = " + imgSrc);
 
                 // create labels
-                var breedLabel = $("<p>");
-                    if(Array.isArray(petBreed)) {
-                    // console.log("Breed" + petBreed[0].$t);
-                        breedLabel.text("Breed: " + petBreed[0].$t + " (" + petAge + ")");
-                        } else if(typeof petBreed == 'object') {
-                    // console.log("Breed" + petBreed.$t);
-                        breedLabel.text("Breed: " + petBreed.$t + " (" + petAge + ")");
-                    }
-                var nameLabel = $("<h3>").text("Meet "+ petName + "!");
-                // var ageLabel = $("<h5>").text("Age: "+ petAge);
-                // var sizeLabel = $("<h5>").text("Size: "+ petSize);
-                // var sexLabel = $("<h5>").text("Sex: "+ petSex);
+                // breedLabel = $("<p>");
+                //     if(Array.isArray(petBreed)) {
+                //     // console.log("Breed" + petBreed[0].$t);
+                //         breedLabel.text("Breed: " + petBreed[0].$t + " (" + petAge + ")");
+                //         } else if(typeof petBreed == 'object') {
+                //     // console.log("Breed" + petBreed.$t);
+                //         breedLabel.text("Breed: " + petBreed.$t + " (" + petAge + ")");
+                //     }
+                // nameLabel = $("<h5>").text("Meet "+ petName + "!");
+                // ageLabel = $("<h5>").text("Age: "+ petAge);
+                // sizeLabel = $("<h5>").text("Size: "+ petSize);
+                // sexLabel = $("<h5>").text("Sex: "+ petSex);
 
                 // populate the divs
-                var id = "#results" + (i+1);
+                id = "#results" + (i+1);
                 console.log(id);
                 $(id).attr("src", imgSrc);
-                // $(id).css({"object-fit":"cover", "border":"1px solid #555", "border-radius":"8px"});
+                $(id).css({"max-width":"100%", "object-fit":"cover", "border":"1px solid #555", "border-radius":"8px", "margin":"15px"});
 
-                // var labelID = "#label" + (i+1);
-                // $(labelID).h4.text(nameLabel);
-
-                // var petPic = $("<img>");
-                //     petPic.attr("src", imgSrc);
-                //     // petPic.attr("style", "width:300px;height:300px");
-                //     petPic.addClass("btn btn-default petImage");
-
-                //  var petDiv = $("<div>");
-                //     // petDiv.append(nameLabel);                   
-                //     // petDiv.append(breedLabel);
-                //     // petDiv.append(ageLabel);
-                //     // petDiv.append(sizeLabel);
-                //     // petDiv.append(sexLabel);
-                //     petDiv.append(petPic);
-                //     petDiv.attr("id", "pet" + i);
-                //     petDiv.addClass("container");
-                //     petDiv.css({"width":"250px", "display":"inline-grid", "margin":"15px", "padding":"30px", "text-align":"center"})
-                // tempDiv.append(petDiv);
             }
     });
 };
