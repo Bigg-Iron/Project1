@@ -141,10 +141,10 @@
           <a href="#" id="showMoreButton" class="btn btn-info">Show More Pets!</a>       
         </div>
       </div>
-    </section>
+  </section>
 
     <section id="showMore">
-      <div class="container">
+      <div class="container" id="showMore">
         <div class="row">
 
           <div class="col-sm-4 results-item">
@@ -214,15 +214,19 @@
           </div>          
         </div>
       </div>
-    </section>
-
-    <!-- Google Maps -->
-  <section id="mapSection">
-    <div class="container">
-      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
-      <div id="map"></div>
-    </div>
   </section>
+
+   <!--  Google Maps
+    <section id="mapSection">
+       <div class="container">
+     <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        </div>
+  </section> -->
 
 
 
@@ -260,7 +264,26 @@
           </div>
         </div>
       </div>
+      <!--  <div class="container"> -->
+    <!--   <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        <!-- </div> -->
     </section>
+
+     <!-- <!-- <section id="mapSection">
+         <div class="container" id="mapsSection">
+      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="map" class="container"></div>
+                </div>
+            </div>
+        </div>
+  </section> -->
 
     <!-- Comments Section -->
     <section id="comments">
@@ -632,7 +655,6 @@
     <script src="assets/scripts/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="assets/scripts/javascript.js"></script>;
     <!-- <script src="assets/scripts/javascript-map.js"></script>; -->
     <script src="assets/scripts/freelancer.js"></script>
     <script src="assets/scripts/main.js"></script> 
@@ -640,6 +662,59 @@
     <!-- ↓ Google Firebase ↓ -->
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
+
+    var map;
+    var geocoder;
+    function initMap() {
+      console.log(document.getElementById('map'));
+      map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: 32.959, lng: 117.265}
+      });
+      geocoder = new google.maps.Geocoder();
+
+      console.log("initMap", map, geocoder);
+      //geocodeAddress(map, geocoder, "5220 Fiore Ter San Diego CA 92122");
+        addresses=["5500 Gaines Street San Diego, CA 92110", "5480 Gaines Street, San Diego, CA 92110", "6461 El Apajo, Rancho Santa Fe, CA 92067", "389 Requeza Street Encinitas, CA 92024"];
+        for(var i=0;i<addresses.length;i++) {
+            address = addresses[i];
+            console.log(address);
+            geocoder.geocode({'address': address}, function(results, status) {
+            if (status === 'OK') {
+             map.setCenter(results[0].geometry.location)
+              console.log(results);
+              console.log("geocode plot successful" + address);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+                //center: results[0].geometry.location
+              });
+            } else {
+              console.log('Geocode was not successful for the following reason: ' + status);
+           }
+        });
+      }      
+    }
+
+ //    function geocodeAddress(geocoder, resultsMap, address) {
+ //    console.log(address, geocoder, resultsMap);
+
+ //    geocoder.geocode({'address': address}, function(results, status) {
+ //          if (status === 'OK') {
+ //            resultsMap.setCenter(results[0].geometry.location)
+ //            console.log(results);
+ //            console.log("geocode plot successful" + address);
+ //            var marker = new google.maps.Marker({
+ //              map: resultsMap,
+ //              position: results[0].geometry.location,
+ //              center: results[0].geometry.location
+ //            });
+ //          } else {
+ //            alert('Geocode was not successful for the following reason: ' + status);
+ //          }
+ //        });
+ // }
+
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
@@ -665,6 +740,7 @@
     
     });
   </script>
-
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACBlirO36YqObG_qKkz9NxVOW9WYz34fg&callback=initMap"></script>
+  <script src="assets/scripts/javascript.js"></script>
   </body>
 </html>
