@@ -275,8 +275,7 @@
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Enter your name here. . ." required data-validation-required-message="Enter your name here. . .">
-                  <p class="help-block text-danger"></p>
+                  <input class="form-control" id="name" type="text" placeholder="Enter your name here. . .">
                 </div>
               </div>
               <div class="control-group">
@@ -296,8 +295,7 @@
               <div class="control-group">-->
                 <div class="form-group floating-label-form-group controls">
                   <label>Comments</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Leave your comments here . . ." required data-validation-required-message="Leave your comments here..."></textarea>
-                  <p class="help-block text-danger"></p>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Leave your comments here . . ." ></textarea>
                 </div>
               </div>
               <br>
@@ -641,6 +639,10 @@
     <script src="assets/scripts/jquery.easing.min.js"></script>
     <script src="assets/scripts/jqBootstrapValidation.js"></script>
     <script src="assets/scripts/contact_me.js"></script>
+    <!-- ↓ Google Firebase ↓ -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+
 
     <!-- Custom scripts for this template -->
     <script src="assets/scripts/javascript.js"></script>;
@@ -649,85 +651,6 @@
     <script src="assets/scripts/main.js"></script> 
 
     
-
-  <!-- ↓ Google Firebase ↓ -->
-    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-    <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
-    authDomain: "project1-c6321.firebaseapp.com",
-    databaseURL: "https://project1-c6321.firebaseio.com",
-    projectId: "project1-c6321",
-    storageBucket: "project1-c6321.appspot.com",
-    messagingSenderId: "1039060630480"
-  };
-  firebase.initializeApp(config);
-
-  var database = firebase.database();
-  
-  $("#sendMessageButton").on('click', function () {
-
-    // Grabs user input
-    var name = $("#name").val().trim();
-    var comment = $("#message").val().trim();
-
-    // Creates local temporary object for holding user name and comments
-    var newUsers = {
-      name: name,
-      comment: comment
-    };
-
-    // Uploads user data to the database
-    database.ref('/siteComments/newUsers').push(newUsers);
-
-    // Console logging for tests
-    console.log(newUsers.name);
-    console.log(newUsers.comment);
-
-    // Clears all of the text-boxes
-    $("#name").val("");
-    $("#message").val("");
-
-   
-  });
-  
-
-// Create Firebase event for adding user comments to the database and a row in the html when a user adds one.
-database.ref().on("child_added", function(childSnapshot, prevChildKey) {
-
-  // Console logging child snapshot
-  console.log(childSnapshot.val());
-
-  // Store everything into a variable.
-  var aUser = childSnapshot.val().name;
-  var aUserComment = childSnapshot.val().comment;
-
-  // Console logging name and comment
-  console.log(aUser);
-  console.log(aUserComment);
-
-  // Populate html with user comments
-  $('#userName').append('<p> Name:  </p>' + newUsers.name);
-  $('#userComment').append('<p> Comment: </p>' + newUsers.comment);
-
-
-
-});
-
-    var name = $("#name").val().trim();
-    var comment = $("#message").val().trim();
-
-    database.ref('/siteComments/newUser').push({
-      username: name,
-      comment: comment
-      });
-    
-
-
-
-
-  </script>
 
   </body>
 </html>
