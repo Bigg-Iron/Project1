@@ -11,6 +11,7 @@ $("#results").hide();
 var petType = "";
 var petBreed = "";
 var petName = "";
+var petDescription = "";
 var petSex = "";
 var petSize = "";
 var petAge = "";
@@ -20,12 +21,14 @@ var petState = "";
 var petZip = "";
 var petID = "";
 var imgSrc = "";
-var breedLabel = "";
-var nameLabel = "";
-var ageLabel = "";
-var sizeLabel = "";
-var sexLabel = "";
-var id = "";
+var breedModalId = "";
+var imageModalId = "";
+var nameModalId = "";
+var ageModalId = "";
+var sizeModalId = "";
+var sexModalId = "";
+var descriptionModalId = "";
+var divId = "";
 
 $(document.body).on('click', '.petTypeButton', function() {
     event.preventDefault();
@@ -60,6 +63,7 @@ function getPetFinder(type) {
                 // get object data
                 petBreed = response.petfinder.pets.pet[i].breeds.breed;
                 petName = response.petfinder.pets.pet[i].name.$t;
+                petDescription = response.petfinder.pets.pet[i].description.$t;
                 petSex = response.petfinder.pets.pet[i].sex.$t;
                 petSize = response.petfinder.pets.pet[i].size.$t;
                 petAge = response.petfinder.pets.pet[i].age.$t;
@@ -117,6 +121,27 @@ function getPetFinder(type) {
                 //console.log(id);
                 $(id).attr("src", imgSrc);
                 $(id).css({"max-width":"100%", "object-fit":"cover", "border":"1px solid #555", "border-radius":"8px", "margin":"15px"});
+                // create the ID's
+                divId = "#results" + (i+1);
+                nameModalId = "#modalName" + (i+1);                
+                imageModalId = "#modalImage" + (i+1);
+                descriptionModalId = "#modalDescription" + (i+1);                
+                breedModalId = "#modalBreed" + (i+1);
+                sexModalId = "#modalSex" + (i+1);
+                ageModalId = "#modalAge" + (i+1);
+                sizeModalId = "#modalSize" + (i+1);
+
+                // populate the divs
+                $(divId).attr("src", imgSrc);
+                $(divId).css({"max-width":"100%", "object-fit":"cover", "border":"1px solid #555", "border-radius":"8px", "margin":"15px"});
+
+                $(nameModalId).text("Meet " + petName + "!");
+                $(imageModalId).attr("src", imgSrc);
+                $(descriptionModalId).text(petDescription);
+                $(breedModalId).text("Breed: " + petBreed);
+                $(sexModalId).text("Sex: " + petSex);
+                $(ageModalId).text("Age: " + petAge);
+                $(sizeModalId).text("Size: " + petSize);
 
             }
     });

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--gailbranch-->
   <head>
 
     <meta charset="utf-8">
@@ -380,7 +380,7 @@
     </div>
 
     <!-- Pet Detail Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="results-modal modal fade" id="resultsModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -392,26 +392,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2></h2>
+                  <h2 id="modalName1">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Description</p>
+                  <img id="modalImage1" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription1">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed1">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex1">Sex: pet's sex</li>
+                    <li id="modalSize1">Size: pet's size</li>
+                    <li id="modalAge1">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -424,7 +416,7 @@
       </div>
     </div>
 
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="results-modal modal fade" id="resultsModal2" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -436,27 +428,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
+                  <h2 id="modalName2">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                  <img id="modalImage2" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription2">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed2">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex2">Sex: pet's sex</li>
+                    <li id="modalSize2">Size: pet's size</li>
+                    <li id="modalAge2">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -468,7 +451,8 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="results-modal modal fade" id="resultsModal3" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -480,27 +464,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
+                  <h2 id="modalName3">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                  <img id="modalImage3" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription3">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed3">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex3">Sex: pet's sex</li>
+                    <li id="modalSize3">Size: pet's size</li>
+                    <li id="modalAge3">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -512,7 +487,8 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="results-modal modal fade" id="resultsModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -524,27 +500,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
+                  <h2 id="modalName4">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                  <img id="modalImage4" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription4">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed4">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex4">Sex: pet's sex</li>
+                    <li id="modalSize4">Size: pet's size</li>
+                    <li id="modalAge4">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -556,7 +523,8 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="results-modal modal fade" id="resultsModal5" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -568,27 +536,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
+                  <h2 id="modalName5">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                  <img id="modalImage5" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription5">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed5">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex5">Sex: pet's sex</li>
+                    <li id="modalSize5">Size: pet's size</li>
+                    <li id="modalAge5">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -600,7 +559,8 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="results-modal modal fade" id="resultsModal6" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -612,27 +572,234 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
+                  <h2 id="modalName6">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="assets/images/box.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                  <img id="modalImage6" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription6">Description</p>
                   <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
+                    <!-- <li id="modalBreed6">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex6">Sex: pet's sex</li>
+                    <li id="modalSize6">Size: pet's size</li>
+                    <li id="modalAge6">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal7" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName7">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage7" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription7">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed7">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex7">Sex: pet's sex</li>
+                    <li id="modalSize7">Size: pet's size</li>
+                    <li id="modalAge7">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal8" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName8">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage8" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription8">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed8">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex8">Sex: pet's sex</li>
+                    <li id="modalSize8">Size: pet's size</li>
+                    <li id="modalAge8">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal9" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName9">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage9" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription9">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed9">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex9">Sex: pet's sex</li>
+                    <li id="modalSize9">Size: pet's size</li>
+                    <li id="modalAge9">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal10" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName10">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage10" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription10">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed10">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex10">Sex: pet's sex</li>
+                    <li id="modalSize10">Size: pet's size</li>
+                    <li id="modalAge10">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal11" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName11">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage11" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription11">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed11">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex11">Sex: pet's sex</li>
+                    <li id="modalSize11">Size: pet's size</li>
+                    <li id="modalAge11">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
+                  </ul>
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="results-modal modal fade" id="resultsModal12" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 id="modalName12">Pet's Name</h2>
+                  <hr class="star-primary">
+                  <img id="modalImage12" class="img-fluid img-centered" src="assets/images/box.png">
+                  <br>
+                  <p id="modalDescription12">Description</p>
+                  <ul class="list-inline item-details">
+                    <!-- <li id="modalBreed12">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalSex12">Sex: pet's sex</li>
+                    <li id="modalSize12">Size: pet's size</li>
+                    <li id="modalAge12">Age: pet's age</li>
+                    <br>
+                    <!-- add more li's here for contact info -->
                   </ul>
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
