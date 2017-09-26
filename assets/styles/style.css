@@ -38,12 +38,12 @@ a:hover {
 
 h1 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h2 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 
@@ -56,7 +56,7 @@ h5,
 h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  text-transform: uppercase; }
+  /*text-transform: uppercase;*/ }
 
 hr.star-light,
 hr.star-primary {
