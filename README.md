@@ -25,10 +25,11 @@
 1. Must use at least two APIs
    * Google Maps API 
    * Google Firebase API
-   * Popper.js
+
 
 2. Must utilize at least one new library or technology that we haven't discussed
    * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
+   * Popper.js 
 
 3. Must use AJAX to pull data
 
