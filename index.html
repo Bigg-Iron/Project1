@@ -847,34 +847,35 @@
       });
       geocoder = new google.maps.Geocoder();
 
+
       for(var i=0;i<addresses.length;i++) {
-        address = addresses[i].address;
-        name = addresses[i].name;
-        contentString = addresses[i].contentString;
-        console.log(i);
         
         var infowindow = new google.maps.InfoWindow();
-        geocoder.geocode({'address': address}, function(results, status) {
-        console.log(i);
-        console.log(results);
-        if (status === 'OK') {
-          console.log(i);
-          map.setCenter(results[0].geometry.location)
-          var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
+
+        (function(i) {
+
+          var address = addresses[i].address;
+          var name = addresses[i].name;
+          var contentString = addresses[i].contentString;
+          geocoder.geocode({'address': address}, function(results, status) {
+            
+            if (status === 'OK') {
+
+              map.setCenter(results[0].geometry.location)
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+
+              bindInfoWindow(marker, map, infowindow, contentString);
+
+            } else {
+              console.log('Geocode was not successful for the following reason: ' + status);
+            }
           });
-
-          bindInfoWindow(marker, map, infowindow, contentString);
-          console.log(marker, infowindow);
-        } else {
-          console.log('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    } 
-
-
-  }
+        })(i) 
+      }
+    }
 
   function bindInfoWindow(marker, map, infowindow, html) {
     marker.addListener('click', function() {
