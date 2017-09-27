@@ -6,7 +6,7 @@ console.log("JavaScript is loaded")
 $(document).ready(function(){
 
 // $("#results").hide();
-$("#showMore").hide();
+// $("#showMore").hide();
 
 // declare and initialize global variables
 var petType = "";
@@ -57,8 +57,7 @@ function getPetFinder(type) {
         dataType: 'json'}).done(function(response) {
 
             var fullAddresses = [];
-
-            //console.log(response);
+            console.log(response);
             // var length = response.petfinder.pets.pet.length;
 
             for(var i=0;i<12;i++) {
@@ -92,10 +91,10 @@ function getPetFinder(type) {
 
                 if(Array.isArray(petBreed)) {
                     petBreed = (petBreed[0].$t);
-                    console.log(petBreed);
+                    // console.log(petBreed);
                 } else if(typeof petBreed == 'object') {
                     petBreed = (petBreed.$t);
-                    console.log(petBreed);
+                    // console.log(petBreed);
                 }
 
 
@@ -156,8 +155,6 @@ function getPetFinder(type) {
             }
     });
 };
-//this closes the (document).ready function.  Do not delete!
-});
 
 // function initMap() {
 //         console.log(document.getElementById('map'));
@@ -188,3 +185,9 @@ function getPetFinder(type) {
 //           }
 //         });
 //  }
+
+
+
+
+//this closes the (document).ready function.  Do not delete!
+});
