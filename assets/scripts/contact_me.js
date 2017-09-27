@@ -51,7 +51,7 @@ $("#sendMessageButton").on('click', function () {
   }
 
     // email doesn't have @ sign... 
-  if (!email && email.indexOf("@") == -1) {
+  if (email && email.indexOf("@") == -1) {
     console.log("does not have @ in email")
     formIsValid = false;
     $("#email").effect( "shake", 
