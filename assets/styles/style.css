@@ -38,19 +38,19 @@ a:hover {
 
 h1 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h2 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 
 
 /*h1,
-h2,*/
-h3,
+h2,
+h3,*/
 h4,
 h5,
 h6 {
