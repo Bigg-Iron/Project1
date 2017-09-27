@@ -231,20 +231,6 @@
       </div>
   </section>
 
-   <!--  Google Maps
-    <section id="mapSection">
-       <div class="container">
-     <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="map" class="container"></div>
-                </div>
-            </div>
-        </div>
-  </section> -->
-
-
-
     <!-- Resources Section -->
     <section class="success" id="resources">
       <div class="container">
@@ -294,35 +280,14 @@
             <a href="http://www.allpetsanimal.com/" target="_blank">visit</a></h1>
             <p>760-634-2022</p>
           </div>
-
-          <!--<div class="col-lg-8 mx-auto text-center">
-            <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
-            </a>-->
-          </div>
         </div>
       </div>
-      <!--  <div class="container"> -->
-    <!--   <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="map" class="container"></div>
-                </div>
-            </div>
-        <!-- </div> -->
-    </section>
-
-     <!-- <!-- <section id="mapSection">
-         <div class="container" id="mapsSection">
-      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="map" class="container"></div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="map" class="container"></div>
         </div>
-  </section> -->
+      </div>
+    </section>
 
     <!-- Comments Section -->
     <section id="comments">
@@ -876,11 +841,125 @@
     <!-- Custom scripts for this template -->
     <!-- <script src="assets/scripts/javascript-map.js"></script> -->
     <script src="assets/scripts/freelancer.js"></script>
-    <script src="assets/scripts/javascript.js"></script>
-    <script src="assets/scripts/main.js"></script>
-    
+    <script src="assets/scripts/main.js"></script> 
 
-    
+    <!-- ↓ Google Firebase ↓ -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
 
+    var map;
+    var geocoder;
+
+    addresses=[{
+          "address": "5500 Gaines Street San Diego, CA 92110", 
+          "name": "San Diego Humane Society",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="infoWindow" class="firstHeading">San Diego Humane Society</h5>'+
+            '<div id="bodyContent">'+
+            '<p>5500 Gaines Street San Diego, CA 92110'+
+            '</div>'+
+            '</div>'
+        },
+        { "address": "5480 Gaines Street, San Diego, CA 92110",
+          "name": "San Diego Animal Services",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">San Diego Animal Services</h5>'+
+            '<div id="bodyContent">'+
+            '<p>5480 Gaines Street, San Diego, CA 92110'+
+            '</div>'+
+            '</div>'
+        },
+        { "address": "6461 El Apajo, Rancho Santa Fe, CA 92067",
+          "name":"Helen Woodward Center",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">Helen Woodward Center</h5>'+
+            '<div id="bodyContent">'+
+            '<p>6461 El Apajo, Rancho Santa Fe, CA 92067</p>'+
+            '</div>'+
+            '</div>'
+        },
+        { "address": "389 Requeza Street Encinitas, CA 92024",
+          "name": "Rancho Coastal Humane Society",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">Rancho Coastal Humane Society</h5>'+
+            '<div id="bodyContent">'+
+            '<p>389 Requeza Street Encinitas, CA 92024</p>'+
+            '</div>'+
+            '</div>'
+    }];
+    
+    function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: 32.959, lng: 117.265}
+      });
+      geocoder = new google.maps.Geocoder();
+
+      var promise = [];
+      for(var i=0;i<4;i++) {
+        address = addresses[i].address;
+        name = addresses[i].name;
+        contentString = addresses[i].contentString;
+        console.log(i);
+        
+        var infowindow = new google.maps.InfoWindow();
+        var call = geocoder.geocode({'address': address}, function(results, status) {
+        console.log(i);
+        console.log(results);
+        if (status === 'OK') {
+          console.log(i);
+          map.setCenter(results[0].geometry.location)
+          var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+          });
+
+          bindInfoWindow(marker, map, infowindow, contentString);
+          console.log(marker, infowindow);
+        } else {
+          console.log('Geocode was not successful for the following reason: ' + status);
+        }
+      });
+
+        promise.push(call);
+    } 
+
+
+  }
+
+  function bindInfoWindow(marker, map, infowindow, html) {
+    marker.addListener('click', function() {
+        infowindow.setContent(html);
+        infowindow.open(map, this);
+    });
+  } 
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
+    authDomain: "project1-c6321.firebaseapp.com",
+    databaseURL: "https://project1-c6321.firebaseio.com",
+    projectId: "project1-c6321",
+    storageBucket: "project1-c6321.appspot.com",
+    messagingSenderId: "1039060630480"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+    
+  $("#sendMessageButton").on('click', function() {
+
+    var name = $("#name").val().trim();
+    var comment = $("#message").val().trim();
+
+    database.ref('/siteComments/newUser').push({
+      username: name,
+      comment: comment
+    });
+    
+  });
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACBlirO36YqObG_qKkz9NxVOW9WYz34fg&callback=initMap"></script>
+  <script src="assets/scripts/javascript.js"></script>
   </body>
 </html>

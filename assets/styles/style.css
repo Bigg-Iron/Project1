@@ -58,6 +58,16 @@ h6 {
   font-weight: 400;
   /*text-transform: uppercase;*/ }
 
+#infoWindowContent {
+  color: black;
+}
+
+.scrollFix {
+    line-height: 1.35;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 hr.star-light,
 hr.star-primary {
   max-width: 250px;
