@@ -1,3 +1,53 @@
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
+  authDomain: "project1-c6321.firebaseapp.com",
+  databaseURL: "https://project1-c6321.firebaseio.com",
+  projectId: "project1-c6321",
+  storageBucket: "project1-c6321.appspot.com",
+  messagingSenderId: "1039060630480"
+};
+
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
+
+
+$("#sendMessageButton").on('click', function () {
+
+  // Grabs user input
+  var name = $("#name").val().trim();
+  var message = $("#message").val().trim();
+
+  // Creates local temporary object for holding user name and comments
+  var newUsers = {
+    name: name,
+    comment: message
+  };
+
+  // Uploads user data to the database
+  database.ref('/contactForm/user').push(newUsers);
+
+  // Console logging for tests
+  console.log(newUsers.name);
+  console.log(newUsers.comment);
+
+  // Clears all of the text-boxes
+  $("#name").val("");
+  $("#message").val("");
+
+ 
+});
+
+
+
+
+
+
+// Contact Me form from template 
+
 //$(function() {
 
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
@@ -72,68 +122,3 @@ $('#name').focus(function() {
   $('#success').html('');
 });
 
-
-
-
-
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
-  authDomain: "project1-c6321.firebaseapp.com",
-  databaseURL: "https://project1-c6321.firebaseio.com",
-  projectId: "project1-c6321",
-  storageBucket: "project1-c6321.appspot.com",
-  messagingSenderId: "1039060630480"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-
-$("#sendMessageButton").on('click', function () {
-
-  // Grabs user input
-  var name = $("#name").val().trim();
-  var message = $("#message").val().trim();
-
-  // Creates local temporary object for holding user name and comments
-  var newUsers = {
-    name: name,
-    comment: message
-  };
-
-  // Uploads user data to the database
-  database.ref('/siteComments/newUsers').push(newUsers);
-
-  // Console logging for tests
-  console.log(newUsers.name);
-  console.log(newUsers.comment);
-
-  // Clears all of the text-boxes
-  $("#name").val("");
-  $("#message").val("");
-
- 
-});
-
-
-// Create Firebase event for adding user comments to the database and a row in the html when a user adds one.
-database.ref().on("child_added", function(childSnapshot, prevChildKey) {
-
-// Console logging child snapshot
-console.log(childSnapshot.val());
-
-// Store everything into a variable.
-var aUser = childSnapshot.val().name;
-var aUserComment = childSnapshot.val().comment;
-
-// Console logging name and comment
-console.log(aUser);
-console.log(aUserComment);
-
-// Populate html with user comments
-$('#userName').append('<p> Name:  </p>' + newUsers.name);
-$('#userComment').append('<p> Comment: </p>' + newUsers.comment);
-
-
-
-});
