@@ -8,8 +8,8 @@
   display: none;
 }
 
-#mapSection {
-  display: none;
+#mapsSection {
+  div {overflow:auto;}
 }
 
 #showMore {
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase; }
 
 hr.star-light,
@@ -106,12 +106,14 @@ section {
     font-size: 3em;
     margin: 0; }
 
-section.map {
+#map {
   background-color: #42F4C2;
+  padding: 150px;
 }
 
 section.success {
   color: white;
+  font-size: 15px;
   background: #18BC9C; }
 
 @media (max-width: 767px) {
