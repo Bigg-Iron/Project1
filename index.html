@@ -877,24 +877,73 @@
             '<p>389 Requeza Street Encinitas, CA 92024</p>'+
             '</div>'+
             '</div>'
-    }];
+        },
+        {
+          "address": "4284 Cass Street San Diego CA 92109",
+          "name": "Second Chance Dog Rescue",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">Second Chance Dog Rescue</h5>'+
+            '<div id="bodyContent">'+
+            '<p>4284 Cass Street San Diego CA 92109</p>'+
+            '</div>'+
+            '</div>'
+        },
+        {
+          "address": "6835 Urubu St, Carlsbad, CA 92009",
+          "name": "K9 Pet Adoption",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">K9 Pet Adoption</h5>'+
+            '<div id="bodyContent">'+
+            '<p>6835 Urubu St, Carlsbad, CA 92009</p>'+
+            '</div>'+
+            '</div>'
+        },
+        {
+          "name": "Oceanside Dog Campus",
+          "address": "2905 San Luis Rey Rd, Oceanside, CA 92058",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">Oceanside Dog Campus</h5>'+
+            '<div id="bodyContent">'+
+            '<p>2905 San Luis Rey Rd, Oceanside, CA 92058</p>'+
+            '</div>'+
+            '</div>'
+        },
+        {
+          "name": "Animal Rescue Thrift Store",
+          "address": "3296 Mission Ave, Oceanside, CA 92058",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">Animal Rescue Thrift Store</h5>'+
+            '<div id="bodyContent">'+
+            '<p>3296 Mission Ave, Oceanside, CA 92058</p>'+
+            '</div>'+
+            '</div>'
+        },
+        {
+          "name": "All Pets Animal Hospital",
+          "address": "149 S. El Camino Real, Encinitas, CA 92024",
+          "contentString" : '<div id="infoWindowContent" class="scrollFix">'+
+            '<h5 id="firstHeading" class="firstHeading">All Pets Animal Hospital</h5>'+
+            '<div id="bodyContent">'+
+            '<p>149 S. El Camino Real, Encinitas, CA 92024</p>'+
+            '</div>'+
+            '</div>'
+        }];
     
     function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
+          zoom: 9,
           center: {lat: 32.959, lng: 117.265}
       });
       geocoder = new google.maps.Geocoder();
 
-      var promise = [];
-      for(var i=0;i<4;i++) {
+      for(var i=0;i<addresses.length;i++) {
         address = addresses[i].address;
         name = addresses[i].name;
         contentString = addresses[i].contentString;
         console.log(i);
         
         var infowindow = new google.maps.InfoWindow();
-        var call = geocoder.geocode({'address': address}, function(results, status) {
+        geocoder.geocode({'address': address}, function(results, status) {
         console.log(i);
         console.log(results);
         if (status === 'OK') {
@@ -911,8 +960,6 @@
           console.log('Geocode was not successful for the following reason: ' + status);
         }
       });
-
-        promise.push(call);
     } 
 
 
