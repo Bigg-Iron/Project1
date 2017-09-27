@@ -33,7 +33,7 @@ $("#sendMessageButton").on('click', function () {
 
   var formIsValid = true;
   
-  //name !== '' && email !== '';
+
 
   console.log(name);
   if(!name) {
