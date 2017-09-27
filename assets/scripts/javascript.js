@@ -5,9 +5,6 @@ console.log("JavaScript is loaded")
 
 $(document).ready(function(){
 
-// $("#results").hide();
-// $("#showMore").hide();
-
 // declare and initialize global variables
 var petType = "";
 var petBreed = "";
@@ -38,6 +35,7 @@ $(document.body).on('click', '.petTypeButton', function() {
     console.log("the " + petType + " button was clicked");
     getPetFinder(petType);
     $("#results").show();
+    $(document).scrollTop($("#results").offset().top);
 });
 
 $(document.body).on('click', '#showMoreButton', function () {
