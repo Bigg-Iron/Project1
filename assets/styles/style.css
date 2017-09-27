@@ -58,16 +58,6 @@ h6 {
   font-weight: 400;
   /*text-transform: uppercase;*/ }
 
-#infoWindowContent {
-  color: black;
-}
-
-.scrollFix {
-    line-height: 1.35;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
 hr.star-light,
 hr.star-primary {
   max-width: 250px;
@@ -118,7 +108,7 @@ section {
 
 #map {
   background-color: #42F4C2;
-  padding: 150px;
+  padding: 100px;
   /*margin-top: 10px;*/
   /*max-height: 200px/*;
   max-width: 300px;*/
@@ -137,7 +127,7 @@ section.success {
     padding-top: 75px; } }
 
 .scroll-top {
-  /*position: fixed;*/
+  position: fixed;
   z-index: 1049;
   right: 2%;
   bottom: 2%;
@@ -220,15 +210,13 @@ header.masthead {
   header.masthead img {
     display: inline-block;
     margin: 0 auto 20px;
-    padding-right: 20px; 
-  }
+    padding-right: 20px; }
   header.masthead .intro-text .name {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 400;
     display: block;
-    /*text-transform: uppercase;*/
-     }
+    /*text-transform: uppercase;*/ }
   header.masthead .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300; }
@@ -238,7 +226,7 @@ header.masthead {
     padding-top: 200px;
     padding-bottom: 50px; }
     header.masthead .intro-text .name {
-      font-size: 3em; }
+      font-size: 4.75em; }
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
