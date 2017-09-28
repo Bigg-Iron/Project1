@@ -12,6 +12,17 @@
   div {overflow:auto;}
 }
 
+#infoWindowContent {
+  color: black;
+}
+
+.scrollFix {
+    line-height: 1.35;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
 #showMore {
   display: none;
   margin-top: -50px;
