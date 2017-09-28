@@ -1,9 +1,15 @@
 console.log("JavaScript is loaded")
 
-// var map;
-// var geocoder;
+$(document).ready(function(){  
+console.log("ready!")
 
-$(document).ready(function(){
+$(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+});
+
+
+$('#results').hide();
+$('#showMore').hide();
 
 // declare and initialize global variables
 var petType = "";
@@ -13,10 +19,6 @@ var petDescription = "";
 var petSex = "";
 var petSize = "";
 var petAge = "";
-var petStreet = "";
-var petCity = "";
-var petState = "";
-var petZip = "";
 var petID = "";
 var imgSrc = "";
 var breedModalId = "";
@@ -42,9 +44,17 @@ $(document.body).on('click', '#showMoreButton', function () {
     event.preventDefault();
     console.log("The 'showMoreButton' was clicked");
     $('#showMoreButton').hide();
-    $('#showMore').slideDown(1500);
+    $('#showMore').slideDown(1000);
+    $('#showLessButton').show();
 });
 
+$(document.body).on('click', '#showLessButton', function (){
+    event.preventDefault();
+    console.log("The 'showLessButton' was clicked");
+    $('#showLessButton').hide();
+    $('#showMore').slideUp(1000);
+    $('#showMoreButton').show();
+});
 
 function getPetFinder(type) {
     var queryURL = "https://api.petfinder.com/pet.find?key=d39bdf5f87198eb7c88ec715df088049&format=json&animal=" + type + "&location=92122&count=12";
@@ -86,23 +96,21 @@ function getPetFinder(type) {
                 } else {
                     petSize = "Large";
                 }
-
                 if(Array.isArray(petBreed)) {
                     petBreed = (petBreed[0].$t);
-                    // console.log(petBreed);
                 } else if(typeof petBreed == 'object') {
                     petBreed = (petBreed.$t);
-                    // console.log(petBreed);
                 }
 
-
+                // initialize address variables for geocoding
                 var address1 = response.petfinder.pets.pet[i].contact.address1.$t;
                 var address2 = response.petfinder.pets.pet[i].contact.address2.$t;
                 var city = response.petfinder.pets.pet[i].contact.city.$t;
                 var state = response.petfinder.pets.pet[i].contact.state.$t;
                 var zip = response.petfinder.pets.pet[i].contact.zip.$t;
 
-                var fullAddress = "";// = address1 + " " + address2 + " " + city + " " + state + " " + zip;
+                var fullAddress = "";
+                // = address1 + " " + address2 + " " + city + " " + state + " " + zip;
                 
                 if(address1 !== undefined) {
                     fullAddress += address1 + " ";
@@ -123,11 +131,7 @@ function getPetFinder(type) {
 
                 //geocodeAddress(geocoder, map, fullAddress);
 
-                // populate the divs
-                id = "#results" + (i+1);
-                //console.log(id);
-                $(id).attr("src", imgSrc);
-                $(id).css({"max-width":"100%", "object-fit":"cover", "border":"1px solid #555", "border-radius":"8px", "margin":"15px"});
+
                 // create the ID's
                 divId = "#results" + (i+1);
                 nameModalId = "#modalName" + (i+1);                
@@ -141,7 +145,8 @@ function getPetFinder(type) {
                 // populate the divs
                 $(divId).attr("src", imgSrc);
                 $(divId).css({"max-width":"100%", "object-fit":"cover", "border":"1px solid #555", "border-radius":"8px", "margin":"15px"});
-
+               
+                // populate the modals
                 $(nameModalId).text("Meet " + petName + "!");
                 $(imageModalId).attr("src", imgSrc);
                 $(descriptionModalId).text(petDescription);
@@ -149,42 +154,9 @@ function getPetFinder(type) {
                 $(sexModalId).text("Sex: " + petSex);
                 $(ageModalId).text("Age: " + petAge);
                 $(sizeModalId).text("Size: " + petSize);
-
             }
     });
 };
-
-// function initMap() {
-//         console.log(document.getElementById('map'));
-//         map = new google.maps.Map(document.getElementById('map'), {
-//           zoom: 12,
-//           center: {lat: 32.959, lng: 117.265}
-//         });
-//         geocoder = new google.maps.Geocoder();
-
-//         console.log("initMap", map, geocoder);
-// }
-
-// function geocodeAddress(geocoder, resultsMap, address) {
-//     console.log(address, geocoder, resultsMap);
-
-//     geocoder.geocode({'address': address}, function(results, status) {
-//           if (status === 'OK') {
-//             resultsMap.setCenter(results[0].geometry.location)
-//             console.log(results);
-//             console.log("geocode plot successful" + address);
-//             var marker = new google.maps.Marker({
-//               map: resultsMap,
-//               position: results[0].geometry.location,
-//               center: results[0].geometry.location
-//             });
-//           } else {
-//             alert('Geocode was not successful for the following reason: ' + status);
-//           }
-//         });
-//  }
-
-
 
 
 //this closes the (document).ready function.  Do not delete!
