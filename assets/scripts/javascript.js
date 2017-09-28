@@ -83,6 +83,16 @@ function getPetFinder(type) {
                 petID = response.petfinder.pets.pet[i].id.$t;
                 imgSrc = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
 
+                // initialize address variables for geocoding
+                var address1 = response.petfinder.pets.pet[i].contact.address1.$t;
+                var address2 = response.petfinder.pets.pet[i].contact.address2.$t;
+                var city = response.petfinder.pets.pet[i].contact.city.$t;
+                var state = response.petfinder.pets.pet[i].contact.state.$t;
+                var zip = response.petfinder.pets.pet[i].contact.zip.$t;
+
+                var fullAddress = "";
+                // = address1 + " " + address2 + " " + city + " " + state + " " + zip;
+                
                 // normalize responses
                 if (petSex == "F") {
                     petSex = "Female";
@@ -101,17 +111,6 @@ function getPetFinder(type) {
                 } else if(typeof petBreed == 'object') {
                     petBreed = (petBreed.$t);
                 }
-
-                // initialize address variables for geocoding
-                var address1 = response.petfinder.pets.pet[i].contact.address1.$t;
-                var address2 = response.petfinder.pets.pet[i].contact.address2.$t;
-                var city = response.petfinder.pets.pet[i].contact.city.$t;
-                var state = response.petfinder.pets.pet[i].contact.state.$t;
-                var zip = response.petfinder.pets.pet[i].contact.zip.$t;
-
-                var fullAddress = "";
-                // = address1 + " " + address2 + " " + city + " " + state + " " + zip;
-                
                 if(address1 !== undefined) {
                     fullAddress += address1 + " ";
                 }
