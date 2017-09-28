@@ -216,6 +216,7 @@
             </a>
           </div>          
         </div>
+        <a href="#" id="showLessButton" class="btn btn-info"><i class="fa fa-search"></i> Show Fewer Pets</a>  
       </div>
   </section>
 
@@ -880,29 +881,29 @@
   } 
 
   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
-    authDomain: "project1-c6321.firebaseapp.com",
-    databaseURL: "https://project1-c6321.firebaseio.com",
-    projectId: "project1-c6321",
-    storageBucket: "project1-c6321.appspot.com",
-    messagingSenderId: "1039060630480"
-  };
-  firebase.initializeApp(config);
+  // var config = {
+  //   apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
+  //   authDomain: "project1-c6321.firebaseapp.com",
+  //   databaseURL: "https://project1-c6321.firebaseio.com",
+  //   projectId: "project1-c6321",
+  //   storageBucket: "project1-c6321.appspot.com",
+  //   messagingSenderId: "1039060630480"
+  // };
+  // firebase.initializeApp(config);
 
-  var database = firebase.database();
+  // var database = firebase.database();
     
-  $("#sendMessageButton").on('click', function() {
+  // $("#sendMessageButton").on('click', function() {
 
-    var name = $("#name").val().trim();
-    var comment = $("#message").val().trim();
+  //   var name = $("#name").val().trim();
+  //   var comment = $("#message").val().trim();
 
-    database.ref('/siteComments/newUser').push({
-      username: name,
-      comment: comment
-    });
+  //   database.ref('/siteComments/newUser').push({
+  //     username: name,
+  //     comment: comment
+  //   });
     
-  });
+  // });
   </script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACBlirO36YqObG_qKkz9NxVOW9WYz34fg&callback=initMap"></script>

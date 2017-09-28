@@ -1,6 +1,15 @@
 console.log("JavaScript is loaded")
 
-$(document).ready(function(){
+$(document).ready(function(){  
+console.log("ready!")
+
+$(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+});
+
+
+$('#results').hide();
+$('#showMore').hide();
 
 // declare and initialize global variables
 var petType = "";
@@ -35,7 +44,16 @@ $(document.body).on('click', '#showMoreButton', function () {
     event.preventDefault();
     console.log("The 'showMoreButton' was clicked");
     $('#showMoreButton').hide();
-    $('#showMore').slideDown(1500);
+    $('#showMore').slideDown(1000);
+    $('#showLessButton').show();
+});
+
+$(document.body).on('click', '#showLessButton', function (){
+    event.preventDefault();
+    console.log("The 'showLessButton' was clicked");
+    $('#showLessButton').hide();
+    $('#showMore').slideUp(1000);
+    $('#showMoreButton').show();
 });
 
 function getPetFinder(type) {
