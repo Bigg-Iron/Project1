@@ -54,15 +54,12 @@ h1 {
 
 h2, h3 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
-
-
 
 /*h1,
 h2,
 h3,*/
-
 h4,
 h5,
 h6 {
@@ -262,7 +259,7 @@ header.masthead {
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  /*background: rgba(24, 188, 156, 0.9); }*/
+  /*background: rgba(24, 188, 156, 0.9); */
 }
 
 #results .results-item .results-link .caption:hover {
@@ -277,17 +274,17 @@ header.masthead {
   margin-top: -12px;
   text-align: center;
   color: white; }
-  #results .results-item .results-link .caption .caption-content i {
+  #results #showMore .results-item .results-link .caption .caption-content i {
     margin-top: -12px; }
-  #results .results-item .results-link .caption .caption-content h3,
-  #results .results-item .results-link .caption .caption-content h4 {
+  #results #showMore .results-item .results-link .caption .caption-content h3,
+  #results #showMore .results-item .results-link .caption .caption-content h4 {
     margin: 0; }
 
-#results * {
+#results #showMore * {
   z-index: 2; }
 
 @media (min-width: 767px) {
-  #results .results-item {
+  #results #showMore .results-item {
     margin: 0 0 30px; } }
 
 .results-modal .modal-dialog {
