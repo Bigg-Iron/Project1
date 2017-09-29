@@ -14,13 +14,23 @@
   padding-top: 0px;
 }
 
-body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden; }
-
 #mapsSection {
   div { overflow: auto; }
 }
+
+#infoWindowContent {
+  color: black;
+}
+
+.scrollFix {
+    line-height: 1.35;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden; }
 
 p {
   font-size: 16px; }
@@ -43,10 +53,8 @@ h1 {
 
 h2, h3 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
-
-
 
 /*h1,
 h2,
@@ -108,7 +116,7 @@ section {
 
 #map {
   background-color: #42F4C2;
-  padding: 100px;
+  padding: 150px;
   /*margin-top: 10px;*/
   /*max-height: 200px/*;
   max-width: 300px;*/
@@ -223,10 +231,10 @@ header.masthead {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 200px;
+    padding-top: 30px;
     padding-bottom: 50px; }
     header.masthead .intro-text .name {
-      font-size: 4.75em; }
+      font-size: 3.75em; }
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
@@ -250,7 +258,8 @@ header.masthead {
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  /*background: rgba(24, 188, 156, 0.9); }*/
+  /*background: rgba(24, 188, 156, 0.9); */
+}
 
 #results .results-item .results-link .caption:hover {
   opacity: 1; }
@@ -264,17 +273,17 @@ header.masthead {
   margin-top: -12px;
   text-align: center;
   color: white; }
-  #results .results-item .results-link .caption .caption-content i {
+  #results #showMore .results-item .results-link .caption .caption-content i {
     margin-top: -12px; }
-  #results .results-item .results-link .caption .caption-content h3,
-  #results .results-item .results-link .caption .caption-content h4 {
+  #results #showMore .results-item .results-link .caption .caption-content h3,
+  #results #showMore .results-item .results-link .caption .caption-content h4 {
     margin: 0; }
 
-#results * {
+#results #showMore * {
   z-index: 2; }
 
 @media (min-width: 767px) {
-  #results .results-item {
+  #results #showMore .results-item {
     margin: 0 0 30px; } }
 
 .results-modal .modal-dialog {

@@ -1,5 +1,6 @@
-# Project 1
+# Group Project #1
 ## Team Name: Fantastic 4
+Team Members: Aruna Vallur, Chryssa Jones, Lorenzo Bartolo, and Gail McFadden.
 
 ![alt text](assets/images/new-logo.png "Paws and Claws")
 
@@ -30,6 +31,7 @@
 2. Must utilize at least one new library or technology that we haven't discussed
    * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
    * Popper.js 
+   * Synchronous callbacks via JS promises method
 
 3. Must use AJAX to pull data
 

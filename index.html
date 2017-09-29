@@ -1,3 +1,5 @@
+<!-- Created by Aruna Vallur, Chryssa Jones, Lorenzo Bartolo, and Gail McFadden (c) 2017. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +11,11 @@
     <meta name="author" content="Fantastic 4 at UC San Diego's Coding Boot Camp">
 
     <title>Paws and Claws of San Diego</title>
+    <script src="https://use.fontawesome.com/1128334790.js"></script>
 
     <!-- Style Sheets -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -25,7 +27,7 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
 
@@ -54,30 +56,17 @@
 
     <!-- Header -->
     <header class="masthead">
-      <div class="container">
-        
+      <div id="pageHeader" class="container">
         <div class="intro-text">
-
-        <span class="name">Find The Perfect Furry Friend</span>
-        <hr class="star-light">
-        <span class="skills">Choose Cat or Dog</span>
-        
+          <span class="name">Adopt The Perfect Furry Friend</span>
+          <hr class="star-light">
+          <span class="skills">Choose Cat or Dog</span>
         </div>
         <br>
-
-        <a href="#">
+        <a class="js-scroll-trigger" href="#results">
         <img class="img-fluid petTypeButton" src="assets/images/kitten.png" alt="cat" data-name="cat" style="width:250px;height:155px;"></a>
-
-        <a href="#">
+        <a class="js-scroll-trigger" href="#results">
         <img class="img-fluid petTypeButton" src="assets/images/pug.png" alt="dog" data-name="dog" style="width:260px;height:155px;"></a>
-
-      
-
-        <!--<div class="intro-text">
-          <span class="name">Find The Perfect Furry Friend</span>
-          
-          <span class="skills">Click on the Dog or Cat</span>
-        </div>-->
       </div>
     </header>
 
@@ -92,10 +81,10 @@
             <a class="results-link" href="#resultsModal1" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content" id="label1">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
                 </div>
               </div>
-              <img id="results1" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results1" class="img-fluid resultsImage" src="">
             </a>
           </div>
 
@@ -103,10 +92,10 @@
             <a class="results-link" href="#resultsModal2" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content" id="label2">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
                 </div>
               </div>
-              <img id="results2" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results2" class="img-fluid resultsImage" src="">
             </a>
           </div>
 
@@ -117,7 +106,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img id="results3" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results3" class="img-fluid resultsImage" src="">
             </a>
           </div>
 
@@ -125,10 +114,10 @@
             <a class="results-link" href="#resultsModal4" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content" id="label4">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
                 </div>
               </div>
-              <img id="results4" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results4" class="img-fluid resultsImage" src="">
             </a>
           </div>
 
@@ -136,10 +125,10 @@
             <a class="results-link" href="#resultsModal5" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content" id="label5">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
                 </div>
               </div>
-              <img id="results5" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results5" class="img-fluid resultsImage" src="">
             </a>
           </div>
 
@@ -147,103 +136,91 @@
             <a class="results-link" href="#resultsModal6" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content" id="label6">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
                 </div>
               </div>
-              <img id="results6" class="img-fluid resultsImage" src="assets/images/box.png">
+              <img id="results6" class="img-fluid resultsImage" src="">
             </a>
           </div>
-          <a href="#" id="showMoreButton" class="btn btn-info">Show More Pets!</a>       
         </div>
+        <a href="#" id="showMoreButton" class="btn btn-info"><i class="fa fa-search"></i> Show More Pets!</a>        
       </div>
-  </section>
+    </section>
 
+<!-- this section is hidden until the user clicks "show more" -->
     <section id="showMore">
-      <div class="container" id="showMore">
+      <div class="container">
         <div class="row">
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal7" data-toggle="modal">
+              <img id="results7" class="img-fluid resultsImage" src="">                   
               <div class="caption">
                 <div class="caption-content" id="label7">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results7" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal8" data-toggle="modal">
+              <img id="results8" class="img-fluid resultsImage" src="">                 
               <div class="caption">
                 <div class="caption-content" id="label8">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results8" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal9" data-toggle="modal">
+              <img id="results9" class="img-fluid resultsImage" src="">                    
               <div class="caption">
                 <div class="caption-content" id="label9">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results9" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal10" data-toggle="modal">
+              <img id="results10" class="img-fluid resultsImage" src="">                 
               <div class="caption">
                 <div class="caption-content" id="label10">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results10" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal11" data-toggle="modal">
+              <img id="results11" class="img-fluid resultsImage" src="">              
               <div class="caption">
                 <div class="caption-content" id="label11">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results11" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>
 
           <div class="col-sm-4 results-item">
             <a class="results-link" href="#resultsModal12" data-toggle="modal">
-              <div class="caption">
+              <img id="results12" class="img-fluid resultsImage" src="">                   
+              <div class="caption">        
                 <div class="caption-content" id="label12">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <!-- <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i> -->
                 </div>
               </div>
-              <img id="results12" class="img-fluid resultsImage" src="assets/images/box.png">
             </a>
           </div>          
         </div>
+        <a href="#" id="showLessButton" class="btn btn-info"><i class="fa fa-search"></i> Show Fewer Pets</a>  
       </div>
   </section>
-
-   <!--  Google Maps
-    <section id="mapSection">
-       <div class="container">
-     <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="map" class="container"></div>
-                </div>
-            </div>
-        </div>
-  </section> -->
-
-
 
     <!-- Resources Section -->
     <section class="success" id="resources">
@@ -266,7 +243,6 @@
           </div>
 
           <div class="col-lg-4 mr-auto">
-            
             <h1>Helen Woodward Center,
             <a href="https://animalcenter.org/" target="_blank">visit</a></h1>
             <p>858-756-4117</p>
@@ -294,36 +270,17 @@
             <a href="http://www.allpetsanimal.com/" target="_blank">visit</a></h1>
             <p>760-634-2022</p>
           </div>
-
-          <!--<div class="col-lg-8 mx-auto text-center">
-            <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
-            </a>-->
-          </div>
         </div>
       </div>
-      <!--  <div class="container"> -->
-    <!--   <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2> -->
             <div class="row">
                 <div class="col-lg-12">
                     <div id="map" class="container"></div>
                 </div>
             </div>
-        <!-- </div> -->
+
     </section>
 
-     <!-- <!-- <section id="mapSection">
-         <div class="container" id="mapsSection">
-      <h2 class="text-center"> ↓ GOOGLE MAP WILL GO HERE ↓ </h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="map" class="container"></div>
-                </div>
-            </div>
-        </div>
-  </section> -->
-
+    
     <!-- Comments Section -->
     <section id="comments">
       <div class="container">
@@ -363,7 +320,7 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <div class="btn btn-success btn-lg" id="sendMessageButton">Send</div>
+                <div class="btn btn-success btn-lg" id="sendMessageButton"><i class="fa fa-envelope"></i>  Send</div>
               </div>
 
               <!-- User Submitted Comments-->
@@ -381,7 +338,7 @@
         </div>
       </div>
     </section>
-    <hr>
+    
     <!-- Footer -->
     <footer class="text-center">
       <div class="footer-above">
@@ -438,15 +395,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName1">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage1" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage1" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription1">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed1">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed1">Breed: pet's breed</li>
                     <li id="modalSex1">Sex: pet's sex</li>
                     <li id="modalSize1">Size: pet's size</li>
                     <li id="modalAge1">Age: pet's age</li>
@@ -474,15 +431,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName2">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage2" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage2" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription2">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed2">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed2">Breed: pet's breed</li>
                     <li id="modalSex2">Sex: pet's sex</li>
                     <li id="modalSize2">Size: pet's size</li>
                     <li id="modalAge2">Age: pet's age</li>
@@ -510,15 +467,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName3">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage3" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage3" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription3">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed3">Breed: pet's breed</li> need to normalize this object before including it -->
+                     <li id="modalBreed3">Breed: pet's breed</li>
                     <li id="modalSex3">Sex: pet's sex</li>
                     <li id="modalSize3">Size: pet's size</li>
                     <li id="modalAge3">Age: pet's age</li>
@@ -546,15 +503,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName4">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage4" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage4" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription4">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed4">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed4">Breed: pet's breed</li>
                     <li id="modalSex4">Sex: pet's sex</li>
                     <li id="modalSize4">Size: pet's size</li>
                     <li id="modalAge4">Age: pet's age</li>
@@ -582,15 +539,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName5">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage5" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage5" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription5">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed5">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed5">Breed: pet's breed</li>
                     <li id="modalSex5">Sex: pet's sex</li>
                     <li id="modalSize5">Size: pet's size</li>
                     <li id="modalAge5">Age: pet's age</li>
@@ -618,15 +575,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName6">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage6" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage6" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription6">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed6">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed6">Breed: pet's breed</li>
                     <li id="modalSex6">Sex: pet's sex</li>
                     <li id="modalSize6">Size: pet's size</li>
                     <li id="modalAge6">Age: pet's age</li>
@@ -654,15 +611,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName7">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage7" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage7" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription7">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed7">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed7">Breed: pet's breed</li>
                     <li id="modalSex7">Sex: pet's sex</li>
                     <li id="modalSize7">Size: pet's size</li>
                     <li id="modalAge7">Age: pet's age</li>
@@ -690,15 +647,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName8">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage8" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage8" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription8">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed8">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed8">Breed: pet's breed</li>
                     <li id="modalSex8">Sex: pet's sex</li>
                     <li id="modalSize8">Size: pet's size</li>
                     <li id="modalAge8">Age: pet's age</li>
@@ -726,15 +683,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName9">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage9" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage9" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription9">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed9">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed9">Breed: pet's breed</li>
                     <li id="modalSex9">Sex: pet's sex</li>
                     <li id="modalSize9">Size: pet's size</li>
                     <li id="modalAge9">Age: pet's age</li>
@@ -762,15 +719,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName10">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage10" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage10" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription10">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed10">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed10">Breed: pet's breed</li>
                     <li id="modalSex10">Sex: pet's sex</li>
                     <li id="modalSize10">Size: pet's size</li>
                     <li id="modalAge10">Age: pet's age</li>
@@ -798,15 +755,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName11">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage11" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage11" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription11">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed11">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed11">Breed: pet's breed</li>
                     <li id="modalSex11">Sex: pet's sex</li>
                     <li id="modalSize11">Size: pet's size</li>
                     <li id="modalAge11">Age: pet's age</li>
@@ -834,15 +791,15 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-12 mx-auto">
                 <div class="modal-body">
                   <h2 id="modalName12">Pet's Name</h2>
                   <hr class="star-primary">
-                  <img id="modalImage12" class="img-fluid img-centered" src="assets/images/box.png">
+                  <img id="modalImage12" class="img-fluid img-centered" src="">
                   <br>
                   <p id="modalDescription12">Description</p>
                   <ul class="list-inline item-details">
-                    <!-- <li id="modalBreed12">Breed: pet's breed</li> need to normalize this object before including it -->
+                    <li id="modalBreed12">Breed: pet's breed</li>
                     <li id="modalSex12">Sex: pet's sex</li>
                     <li id="modalSize12">Size: pet's size</li>
                     <li id="modalAge12">Age: pet's age</li>
@@ -868,20 +825,91 @@
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/jquery.easing.min.js"></script>
     <script src="assets/scripts/jqBootstrapValidation.js"></script>
-    <!-- ↓ Google Firebase ↓ -->
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script src="assets/scripts/contact_me.js"></script>
-
-
-
-    <!-- Custom scripts for this template -->
-    <!-- <script src="assets/scripts/javascript-map.js"></script> -->
     <script src="assets/scripts/freelancer.js"></script>
-    <script src="assets/scripts/javascript.js"></script>
-    <script src="assets/scripts/main.js"></script>
-    
+    <script src="assets/scripts/main.js"></script> 
+    <script src="assets/scripts/data.js"></script>
 
+    <!-- ↓ Google Firebase ↓ -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+
+    var map;
+    var geocoder;
     
+    function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: {lat: 32.959, lng: 117.265}
+      });
+      geocoder = new google.maps.Geocoder();
+
+
+      for(var i=0;i<addresses.length;i++) {
+        
+        var infowindow = new google.maps.InfoWindow();
+
+        (function(i) {
+
+          var address = addresses[i].address;
+          var name = addresses[i].name;
+          var contentString = addresses[i].contentString;
+          geocoder.geocode({'address': address}, function(results, status) {
+            
+            if (status === 'OK') {
+
+              map.setCenter(results[0].geometry.location)
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+
+              bindInfoWindow(marker, map, infowindow, contentString);
+
+            } else {
+              console.log('Geocode was not successful for the following reason: ' + status);
+            }
+          });
+        })(i) 
+      }
+    }
+
+  function bindInfoWindow(marker, map, infowindow, html) {
+    marker.addListener('click', function() {
+        infowindow.setContent(html);
+        infowindow.open(map, this);
+    });
+  } 
+
+  // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyD7Tl5ZzIxV33LqQqvRyOvcDFKtc9Vselk",
+  //   authDomain: "project1-c6321.firebaseapp.com",
+  //   databaseURL: "https://project1-c6321.firebaseio.com",
+  //   projectId: "project1-c6321",
+  //   storageBucket: "project1-c6321.appspot.com",
+  //   messagingSenderId: "1039060630480"
+  // };
+  // firebase.initializeApp(config);
+
+  // var database = firebase.database();
+    
+  // $("#sendMessageButton").on('click', function() {
+
+  //   var name = $("#name").val().trim();
+  //   var comment = $("#message").val().trim();
+
+  //   database.ref('/siteComments/newUser').push({
+  //     username: name,
+  //     comment: comment
+  //   });
+    
+  // });
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACBlirO36YqObG_qKkz9NxVOW9WYz34fg&callback=initMap"></script>
+  <script src="assets/scripts/javascript.js"></script>
 
   </body>
 </html>
