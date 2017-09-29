@@ -28,7 +28,7 @@ $("#sendMessageButton").on('click', function () {
     name: name,
     comment: message,
     email: email,
-    phone: phone,
+    phone: phone
   };
 
   var formIsValid = true;
@@ -51,14 +51,14 @@ $("#sendMessageButton").on('click', function () {
   }
 
     // email doesn't have @ sign... 
-  if (email && email.indexOf("@") == -1) {
-    console.log("does not have @ in email")
+  if (email == "" && email.indexOf("@") == -1) {
+    console.log("Not a valid email")
     formIsValid = false;
     $("#email").effect( "shake", 
     {times:4}, 1000 );
   }
 
-  if (phone && phone.length != 10) {
+  if (phone.length != 10) {
     console.log("phone is not 10 digits")
     formIsValid = false;
     $("#phone").effect( "shake", 
