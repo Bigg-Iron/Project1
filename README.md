@@ -4,6 +4,7 @@ Team Members: Aruna Vallur, Chryssa Jones, Lorenzo Bartolo, and Gail McFadden.
 
 ![alt text](assets/images/new-logo.png "Paws and Claws")
 
+Using an API's from Petfinder and Google maps, my team and I created a real-time, easy to navigate application to locate dogs and cats available for adoption.
 
 <br><br>
 
@@ -17,79 +18,6 @@ Team Members: Aruna Vallur, Chryssa Jones, Lorenzo Bartolo, and Gail McFadden.
 - Google Material Design 
 - Materialize CSS Framework
 
-
-
-
-<br><br>
-
-# Project Requirements
-1. Must use at least two APIs
-   * Google Maps API 
-   * Google Firebase API
-
-
-2. Must utilize at least one new library or technology that we haven't discussed
-   * [Popular Front-end JavaScript Frameworks](https://github.com/showcases/front-end-javascript-frameworks)
-   * Popper.js 
-   * Synchronous callbacks via JS promises method
-
-3. Must use AJAX to pull data
-
-4. Must meet good quality coding standards (indentation, scoping, naming)
-
-5. Must NOT use alerts, confirms, or prompts (look into modals!)
-
-6. Must have some sort of repeating element (table, columns, etc)
-
-7. Must use Bootstrap or Alternative CSS Framework
-
-8. Must be Deployed (Github Pages...etc)
-
-9. Must have User Input Validation
-
-
-
-<br><br>
-
-
-
-
-
-# Project Tools:
-
-<br><br>
-
-## API 'Suggestions'
-* Allow CORS
-* Simple or no authentication
-* JSON response returned
-* Well documented
-
-  * Spotify Web API
-  * Reddit API
-  * YouTube API
-  * LinkedIn
-  * SoundCloud
-  * Wikipedia
-  * Rotten Tomatoes
-  * Flickr
-  * Pinterest API
-  * Google Custom Search API
-  * Tumblr API
-  * Marvel API
-  * OMDB
-  * Zillow
-
-<br>
-
-## Project Management Tools:
-
-* [Trello](https://trello.com/)
-* [Google Basecamp](https://basecamp.com/)
-* [Asana](https://asana.com/)
-* [Trello](https://freedcamp.com/)
-
-<br><br>
 
 ## Project Resources:
 
