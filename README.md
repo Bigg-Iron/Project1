@@ -1,4 +1,4 @@
-# Group Project #1
+Paws&Claws
 ## Team Name: Fantastic 4
 Team Members: Aruna Vallur, Chryssa Jones, Lorenzo Bartolo, and Gail McFadden.
 
